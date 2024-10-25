@@ -16,19 +16,22 @@ body{
   padding: 0.2rem 0.2rem 0.2rem 0.2rem;
   float:center;
   margin: 0.5rem;
-  font-size: 32px;
+  font-size: 35px;
 }
 .eqn{
     width: 3rem;
+}
+#mat3{
+  font-size: 20px;
+  
 }
 .container{
     /*border: 1px solid #717377;*/
     padding: 1rem;
     border-radius: 1.2rem;
     background-color: whitesmoke;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
     /*background: transparent;
     background: linear-gradient(45deg, #0a0a0a, #3a4452);*/
     box-shadow: 0px 3px 15px rgba(133, 115, 119, 0.5);
@@ -59,8 +62,15 @@ input{
 .secont {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
+margin: 0 63px;
 
+}
+#te1{
+margin: 0;
+padding-top: 10px;
+}
+#ty{
+margin-top: 9px;
 }
 
 .section {
@@ -74,51 +84,8 @@ box-sizing: border-box;
   flex-basis: 100%;
   width: 100%;
 }
-.eqn{
-    width: 30px;
-}
-.container{
-  margin: 10px;
-}
-.mat3{
-  font-size: 17px;
-}
-
 }
 ul{
 margin: 0;
 }
 
-.next{
-background-color: #04AA6D;
-color: white;
-font-size: 18px;
-margin-top: 0.5rem;
-align-content: center;
-text-align: center;
-padding: 8px 16px;
-text-decoration: none;
-width:8rem;
-float:right;
-}
-.next:hover {
-background-color: #ada;
-color: black;
-}
-.previous{
-display: block;
-float:left;
-background-color: #04AA6D;
-color: white;
-font-size: 18px;
-margin-top: 0.5rem;
-align-content: center;
-text-align: center;
-padding: 8px 16px;
-text-decoration: none;
-width:5rem;
-}
-.previous:hover {
-background-color: #ada;
-color: black;
-}
