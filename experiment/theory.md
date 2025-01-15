@@ -1,4 +1,3 @@
-Aim: It is well known that various physical situations are modelled in terms of systems of linear equations. The aim of this experiment is to enable the user to appreciate the mathematics behind the consistency of such a system and to provide insight to the user to view the applications in the right perspective. This experiment is not focused on learning methods for finding solution(s) of a given system of linear equations. However, examples of common use displaying standard methods for finding solutions have been discussed.
 #### 1. System of linear equations:
 Let us consider a system of two linear equations in three variables given below:<br>
 ax<sub>1</sub>+bx<sub>2</sub>+cx<sub>3</sub>=r <br>
@@ -76,7 +75,7 @@ Clearly
 
 $$
 \begin{aligned}
-&\text{The matrix } A = \begin{pmatrix} 
+A^+ = \begin{pmatrix} 
 1 & 2 & \vert & 4 \\
 2 & 6 & \vert & 2
 \end{pmatrix} 
@@ -84,11 +83,12 @@ $$
 $$
 
 
-The rank of A is 2 and the rank of A<sup>+</sup> is also 2. Hence RankA=RankA<sup>+</sup>. Thus solution exists that is, the given matrix equation is consistent. As A is a square matrix and is invertible, by Section 6.2. (i), solution is unique.
+The rank of A is 2 and the rank of A<sup>+</sup> is also 2. Hence RankA=RankA<sup>+</sup>. Thus solution exists that is, the given matrix equation is consistent. As A is a square matrix and is invertible, by Section 6.2. (i), solution is unique. <br>
 (ii.) Consider the matrix equation AX=B, where 
+
 $$
 \begin{aligned}
-&\text{The matrix } A^+ = \begin{pmatrix} 
+A = \begin{pmatrix} 
 1 & 1 & -1 \\
 0 & 0 & 0
 \end{pmatrix} 
@@ -101,15 +101,99 @@ B = \begin{pmatrix}
 $$
 
 <b>Consistency:</b>
-Clearly A+=|. The rank of A is 1 and the rank of A+ is also 2. Hence RankA≠RankA+. Thus the given matrix equation is inconsistent.
-(ii.) Consider the matrix equation AX=B, where A= and .
-Consistency & uniqueness:
-Clearly A+=|. The rank of A is 2 and the rank of A+ is also 2. Hence RankA=RankA+. Thus solution exists and the given matrix equation is consistent. As (1, 1) is the only solution which satisfy the above matrix equation, solution is not unique. 
-(iii.) Consider the matrix equation AX=B, where A= and .
-Consistency & uniqueness:
-Clearly A+=|. The rank of A is 1 and the rank of A+ is also 1. Hence RankA=RankA+. Thus solution exists and the given matrix equation is consistent. As (2, 0) and (0, 2) both satisfy the above matrix equation, solution is not unique. 
+Clearly 
+
+$$
+\begin{aligned}
+A^+ = \begin{pmatrix} 
+1 & 1 & -1 \vert & 2 \\
+0 & 0 & 0 \vert & 4
+\end{pmatrix} 
+\end{aligned}
+$$
+
+The rank of A is 1 and the rank of A<sup>+</sup> is also 2. Hence RankA≠RankA<sup>+</sup>. Thus the given matrix equation is inconsistent. <br>
+(iii.) Consider the matrix equation AX=B, where
+
+$$
+\begin{aligned}
+A = \begin{pmatrix} 
+1 & 1 \\
+1 & -1 \\
+1 & 2
+\end{pmatrix} 
+\text{ and } 
+B = \begin{pmatrix} 
+2 \\ 
+0 \\
+3
+\end{pmatrix}.
+\end{aligned}
+$$
+
+<b>Consistency & uniqueness:</b>
+Clearly
+
+$$
+\begin{aligned}
+A^+ = \begin{pmatrix} 
+1 & 1  \vert & 2  \\
+1 & -1 \vert & 0 \\
+1 & 2  \vert & 3
+\end{pmatrix} 
+\end{aligned}
+$$
+
+The rank of A is 2 and the rank of A<sup>+</sup> is also 2. Hence RankA=RankA<sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As (1, 1) is the only solution which satisfy the above matrix equation, solution is not unique. <br>
+(iv.) Consider the matrix equation AX=B, where
+
+$$
+\begin{aligned}
+A = \begin{pmatrix} 
+1 & 1 \\
+2 & 2 \\
+3 & 3
+\end{pmatrix} 
+\text{ and } 
+B = \begin{pmatrix} 
+2 \\ 
+4 \\
+6
+\end{pmatrix}.
+\end{aligned}
+$$
+
+<b>Consistency & uniqueness:</b>
+Clearly 
+
+$$
+\begin{aligned}
+A^+ = \begin{pmatrix} 
+1 & 1  \vert & 2  \\
+2 & 2 \vert & 4 \\
+3 & 3  \vert & 6
+\end{pmatrix} 
+\end{aligned}
+$$
+
+The rank of A is 1 and the rank of A<sup>+</sup> is also 1. Hence RankA=RankA<sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As (2, 0) and (0, 2) both satisfy the above matrix equation, solution is not unique. 
 ##### 6.4. Understanding the condition for consistency and uniqueness of matrix equation (through an example):
-Example: Consider the matrix equation AX=B, where A=and B=.
+Example: Consider the matrix equation AX=B, where 
+
+$$
+\begin{aligned}
+A = \begin{pmatrix} 
+1 & -1 & 0 \\
+0 & 1 & 1
+\end{pmatrix} 
+\text{ and } 
+B = \begin{pmatrix} 
+4 \\
+6
+\end{pmatrix}.
+\end{aligned}
+$$
+
  Linear map:
 We first find the linear transformation associated with A w.r.t. the standard basis B1={e1, e2, e3} and B2={f1, f2} of R3 and R2 respectively. Here e1=(1, 0, 0), e2=(0, 1, 0), e3=(0, 0,1), f1=(1, 0) and f2=(0, 1). Define T(1, 0, 0)=1(1, 0)+0(0, 1)=(1, 0), T(0, 1, 0)=-1(1, 0)+1(0, 1)=(-1, 1) and T(0, 0, 1)=0(1, 0)+1(0, 1)=(0, 1). If (x, y, z)=a(1, 0, 0)+b(0, 1, 0)+c(0, 0, 1); then a=x, b=y and c=z. Thus define T:R3→R2 by T(x, y, z)= aT(1, 0, 0)+bT(0, 1, 0)+cT(0, 0, 1)=a(1, 0)+b(-1, 1)+c(0, 1)=(a-b, b+c)=(x-y, y+z), where x, y, zR. Thus the linear transformation T:R3→R2 associated with the matrix A w.r.t. the basis B1 and B2 is T(x, y, z)=(x-y, y+z), where x, y, zR.
 Linear map equation:
