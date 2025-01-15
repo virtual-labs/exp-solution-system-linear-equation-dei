@@ -13,7 +13,7 @@ $$
 \end{aligned}
 $$
 
-are obtained from the coefficients of the equations given in the above section. The matrix A is called coefficient matrix and the matrix [A|B] is known as augmented matrix and is denoted by A+. <br>
+are obtained from the coefficients of the equations given in the above section. The matrix A is called coefficient matrix and the matrix [A|B] is known as augmented matrix and is denoted by A<sup>+</sup>. <br>
 #### 3. Related matrix equation:
 Let A be a matrix of order m×n and B be a column matrix of order m×1. Then AX=B is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as AX=B, where 
 
@@ -41,7 +41,19 @@ $$
 \end{aligned}
 $$
 
-Clearly | is the augmented matrix. 
+Clearly
+
+$$
+\begin{aligned}
+A^+ = \begin{pmatrix} 
+2 & 3 & 4 \vert & 1 \\
+1 & -2 & 3 \vert & 2
+\end{pmatrix} 
+\end{aligned}
+$$
+
+
+is the augmented matrix. 
 #### 5. Related linear map equation and its equivalence:
 We discuss below the linear map equation associated with a matrix equation.
 ##### 5.1. Related linear map and its range: 
@@ -194,31 +206,42 @@ B = \begin{pmatrix}
 \end{aligned}
 $$
 
- Linear map:
-We first find the linear transformation associated with A w.r.t. the standard basis B1={e1, e2, e3} and B2={f1, f2} of R3 and R2 respectively. Here e1=(1, 0, 0), e2=(0, 1, 0), e3=(0, 0,1), f1=(1, 0) and f2=(0, 1). Define T(1, 0, 0)=1(1, 0)+0(0, 1)=(1, 0), T(0, 1, 0)=-1(1, 0)+1(0, 1)=(-1, 1) and T(0, 0, 1)=0(1, 0)+1(0, 1)=(0, 1). If (x, y, z)=a(1, 0, 0)+b(0, 1, 0)+c(0, 0, 1); then a=x, b=y and c=z. Thus define T:R3→R2 by T(x, y, z)= aT(1, 0, 0)+bT(0, 1, 0)+cT(0, 0, 1)=a(1, 0)+b(-1, 1)+c(0, 1)=(a-b, b+c)=(x-y, y+z), where x, y, zR. Thus the linear transformation T:R3→R2 associated with the matrix A w.r.t. the basis B1 and B2 is T(x, y, z)=(x-y, y+z), where x, y, zR.
-Linear map equation:
-T(x, y, z)=b, where b=(4, 2)=BT is the linear map equation equivalent to the given matrix equation.
-Consistency of linear map equation:
-The linear map equation is T(x, y, z)=(4, 2) is consistent as b=(4, 2)Range(T).
-Uniqueness of linear map equation:
+<b>Linear map:</b>
+We first find the linear transformation associated with A w.r.t. the standard basis B<sub>1</sub>={e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>} and B<sub>2</sub>={f<sub>1</sub>, f<sub>1</sub>} of R<sup>3</sup> and R<sup>2</sup> respectively. Here e<sub>1</sub>=(1, 0, 0), e<sub>2</sub>=(0, 1, 0), e<sub>3</sub>=(0, 0,1), f<sub>1</sub>=(1, 0) and f<sub>2</sub>=(0, 1). Define T(1, 0, 0)=1(1, 0)+0(0, 1)=(1, 0), T(0, 1, 0)=-1(1, 0)+1(0, 1)=(-1, 1) and T(0, 0, 1)=0(1, 0)+1(0, 1)=(0, 1). If (x, y, z)=a(1, 0, 0)+b(0, 1, 0)+c(0, 0, 1); then a=x, b=y and c=z. Thus define T:R<sup>3</sup>→R<sup>2</sup> by T(x, y, z)= aT(1, 0, 0)+bT(0, 1, 0)+cT(0, 0, 1)=a(1, 0)+b(-1, 1)+c(0, 1)=(a-b, b+c)=(x-y, y+z), where x, y, z&isin;R. Thus the linear transformation T:R<sup>3</sup>→R<sup>2</sup> associated with the matrix A w.r.t. the basis B<sub>1</sub> and B<sub>2</sub> is T(x, y, z)=(x-y, y+z), where x, y, z&isin;R.
+<b>Linear map equation:</b>
+T(x, y, z)=b, where b=(4, 2)=B<sup>T</sup> is the linear map equation equivalent to the given matrix equation.
+<b>Consistency of linear map equation:</b>
+The linear map equation is T(x, y, z)=(4, 2) is consistent as b=(4, 2)&isin;Range(T).
+<b>Uniqueness of linear map equation:</b>
 Solution of linear map equation T(x, y, z)=(4, 2) is not unique as both (4, 0, 2) and (6, 2, 0) map to (4, 2). Notice that T is not one-to-one.
-Understanding:
-As b≡(4, 2)Range(T), (4, 2) which is the last column vector of A+ is a linear combination of column vectors of A. This implies that RankA=RankA+.
+<b>Understanding:</b>
+As b≡(4, 2)&isin;Range(T), (4, 2) which is the last column vector of A<sup>+</sup> is a linear combination of column vectors of A. This implies that RankA=RankA<sup>+</sup>.
 ##### 6.5. Remark:
-i.Let A be a square matrix and the matrix equation AX=B is consistent. Then it has a unique solution if and only if A is invertible.
-ii.Let A be a matrix of order 2×3 and the matrix equation AX=B is consistent. Then it does not have a unique solution.
+i.Let A be a square matrix and the matrix equation AX=B is consistent. Then it has a unique solution if and only if A is invertible. <br>
+ii.Let A be a matrix of order 2×3 and the matrix equation AX=B is consistent. Then it does not have a unique solution. <br>
 iii.Let A be a matrix of order 3×2 and the matrix equation AX=B is consistent. Then it may or may not have a unique solution. It has a unique solution if and only if RankA=2.
 #### 7. Consistency (existence of solution) of a system of linear equations:
 ##### 7.1. Consistency:
-Consider a system of two linear equations in three variables as given by equation (i). Then it is consistent if and only if related matrix equation AX=B is consistent if and only if RankA =RankA+.
-In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation AX=0, where 0= is consistent. In this case, clearly since A=A+, a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.
+Consider a system of two linear equations in three variables as given by equation (i). Then it is consistent if and only if related matrix equation AX=B is consistent if and only if RankA =RankA<sup>+</sup>. <br>
+In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation AX=0, where 
+
+$$
+\begin{aligned}
+0 = \begin{pmatrix} 
+0 \\ 0 \\ 0 
+\end{pmatrix} 
+\end{aligned}
+$$
+
+
+is consistent. In this case, clearly since A=A<sup>+</sup>, a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.
 ##### 7.2. Uniqueness:
 Let solution of a system of two linear equations in three variables as given in equation (i) exists. Then it has a unique solution if and only if matrix equation AX=B has a unique solution.
 ##### 7.3. Example:
 (i.) Consider the system of three linear equations in two variables given as follows 
-x1+x2=2            ... (i),
-2x1+2x2=4        …(ii) and 
-3x1+3x2=6        …(iii)
+x<sub>1</sub>+x<sub>2</sub>=2            ... (i), <br>
+2x<sub>1</sub>+2x<sub>2</sub>=4        …(ii) and <br>
+3x<sub>1</sub>+3x<sub>2</sub>=6        …(iii) <br>
 Then the related matrix equation is AX=B, where A=, X= and B=. Its solution exists which is shown in the Example 6.4. (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.
 #### 8. Conclusion:
 Following are equivalent: <br>
