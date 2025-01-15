@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": Consider the consistent matrix equation AX=B, where A is a 2×3 and B is a column matrix of order 2×1. Let T:R^3→R^2 be the linear transformation w.r.t. the standard basis associated with the matrix A. Then ",
+      "question": "Consider the consistent matrix equation AX=B, where A is a 2×3 and B is a column matrix of order 2×1. Let T:R^3→R^2 be the linear transformation w.r.t. the standard basis associated with the matrix A. Then ",
       "answers": {
         "a": "B&isin;Range(T)",
         "b": "B&isin;Null space(T)",
