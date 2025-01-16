@@ -1,38 +1,81 @@
-{
+{ 
   "version": 2.0,
   "questions": [
-    {
-      "question": "This is a Sample Question 1?",
+   {
+      "question": "Let $A=\\begin{bmatrix} 1  & 2 \\\\ -2 & 1 \\end{bmatrix}$ and $B=\\begin{bmatrix} 1  & 2 | 4 \\\\ -2 & 1 | 1 \\end{bmatrix}$. Then",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "RankA=2; RankB=1 ",
+        "b": "RankA=1; RankB=2 ",
+        "c": "RankA=2; RankB=2 ",
+        "d": "RankA=1; RankB=1 "
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $A=\\begin{bmatrix} -1  & 1 \\\\ -2 & 2 \\end{bmatrix}$ and $B=\\begin{bmatrix} -1  &  2 | 0 \\\\ -2 & -1 | 0 \\end{bmatrix}$. Then the rankA and rankB are respectively",
+      "answers": {
+        "a": " 2 & 1",
+        "b": "1 & 2 ",
+        "c": "2 & 2",
+        "d": "0 & 1"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let A be a matrix of order n×m and the B be a matrix of order n×(m+1) such that the first n column of B are same as that of A. Then",
+      "answers": {
+        "a": "RankA≤RankB",
+        "b": "RankA=RankB",
+        "c": "RankA≥RankB",
+        "d": "RankB is not defined"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Let $A=\\begin{bmatrix} 1  & -1 & 0 \\\\ 0 & 1 & -1 \\end{bmatrix}$ and $B=\\begin{bmatrix} -1 \\\\ -1 \\\\ -2 \\end{bmatrix}$. Then A.B equals",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+        "b": "$\\begin{bmatrix} -2 \\\\ 3 \\\\ 0 \\end{bmatrix}$",
+        "c": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+        "d": "Not defined"
       },
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+        "question": "Let $A=\\begin{bmatrix} 1  & 1 & 0 \\\\ 0 & 1 &  0 \\\\ 0 & 0 & 0 \\end{bmatrix}$",
+      "answers": {
+        "a": "A is invertible and A^2 is invertible",
+        "b": "A is not invertible and A^2 is invertible",
+        "c": "A is invertible and A^2 is not invertible",
+        "d": "A is not invertible and A^2 is also not invertible"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $A=\\begin{bmatrix} 1  & 1 & 0 \\\\ 1 & -1 &  1 \\\\ 2 & 1 & 0 \\end{bmatrix}$",
+      "answers": {
+        "a": "det(A)=2 and det(A^{-1}) does not exist",
+        "b": "det(A)=-1 and det(A^{-1}) exists",
+        "c": "det(A)=1and det(A^{-1}) exists",
+        "d": "None of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $A=\\begin{bmatrix} 4  & -1 \\\\ 12 & -3 \\end{bmatrix}$",
+       "answers": {
+        "a": "A is invertible and A=A^2",
+        "b": "A is not invertible and A=A^2",
+        "c": "A is invertible and A≠A^2",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
