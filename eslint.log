@@ -1,0 +1,38 @@
+
+/home/runner/work/exp-solution-system-linear-equation-dei/exp-solution-system-linear-equation-dei/experiment/simulation/js/main.js
+    3:14  warning  'submit' is defined but never used        no-unused-vars
+   14:13  warning  'x1' is assigned a value but never used   no-unused-vars
+   15:13  warning  'x2' is assigned a value but never used   no-unused-vars
+   62:14  warning  'smatrix' is defined but never used       no-unused-vars
+   97:14  warning  'showexp' is defined but never used       no-unused-vars
+  108:14  warning  'b1' is assigned a value but never used   no-unused-vars
+  112:14  warning  'b2' is assigned a value but never used   no-unused-vars
+  129:7   warning  'MathJax' is not defined                  no-undef
+  129:37  warning  'MathJax' is not defined                  no-undef
+  135:14  warning  'amat' is defined but never used          no-unused-vars
+  165:5   warning  'MathJax' is not defined                  no-undef
+  165:35  warning  'MathJax' is not defined                  no-undef
+  332:14  warning  'lmeqe' is defined but never used         no-unused-vars
+  339:14  warning  'a' is assigned a value but never used    no-unused-vars
+  340:14  warning  'b' is assigned a value but never used    no-unused-vars
+  341:14  warning  'c' is assigned a value but never used    no-unused-vars
+  342:14  warning  'b1' is assigned a value but never used   no-unused-vars
+  343:14  warning  'd' is assigned a value but never used    no-unused-vars
+  344:14  warning  'e' is assigned a value but never used    no-unused-vars
+  345:14  warning  'f' is assigned a value but never used    no-unused-vars
+  346:14  warning  'b2' is assigned a value but never used   no-unused-vars
+  390:10  warning  'illustration' is defined but never used  no-unused-vars
+  433:9   warning  'MathJax' is not defined                  no-undef
+  433:39  warning  'MathJax' is not defined                  no-undef
+
+/home/runner/work/exp-solution-system-linear-equation-dei/exp-solution-system-linear-equation-dei/experiment/simulation/js/main2.js
+  156:15  warning  'matrix' is assigned a value but never used   no-unused-vars
+  157:15  warning  'matrix2' is assigned a value but never used  no-unused-vars
+  162:18  warning  'i' is already defined                        no-redeclare
+  189:9   warning  'MathJax' is not defined                      no-undef
+  189:39  warning  'MathJax' is not defined                      no-undef
+  199:9   warning  'MathJax' is not defined                      no-undef
+  199:39  warning  'MathJax' is not defined                      no-undef
+
+✖ 31 problems (0 errors, 31 warnings)
+
