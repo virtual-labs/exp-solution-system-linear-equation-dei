@@ -213,12 +213,16 @@ $$
 
 <b>Linear map:</b>
 We first find the linear transformation associated with A w.r.t. the standard basis B<sub>1</sub>={e<sub>1</sub>, e<sub>2</sub>, e<sub>3</sub>} and B<sub>2</sub>={f<sub>1</sub>, f<sub>1</sub>} of R<sup>3</sup> and R<sup>2</sup> respectively. Here e<sub>1</sub>=(1, 0, 0), e<sub>2</sub>=(0, 1, 0), e<sub>3</sub>=(0, 0,1), f<sub>1</sub>=(1, 0) and f<sub>2</sub>=(0, 1). Define T(1, 0, 0)=1(1, 0)+0(0, 1)=(1, 0), T(0, 1, 0)=-1(1, 0)+1(0, 1)=(-1, 1) and T(0, 0, 1)=0(1, 0)+1(0, 1)=(0, 1). If (x, y, z)=a(1, 0, 0)+b(0, 1, 0)+c(0, 0, 1); then a=x, b=y and c=z. Thus define T:R<sup>3</sup>→R<sup>2</sup> by T(x, y, z)= aT(1, 0, 0)+bT(0, 1, 0)+cT(0, 0, 1)=a(1, 0)+b(-1, 1)+c(0, 1)=(a-b, b+c)=(x-y, y+z), where x, y, z&isin;R. Thus the linear transformation T:R<sup>3</sup>→R<sup>2</sup> associated with the matrix A w.r.t. the basis B<sub>1</sub> and B<sub>2</sub> is T(x, y, z)=(x-y, y+z), where x, y, z&isin;R. <br>
+
 <b>Linear map equation:</b>
 T(x, y, z)=b, where b=(4, 2)=B<sup>T</sup> is the linear map equation equivalent to the given matrix equation. <br>
+
 <b>Consistency of linear map equation:</b>
-The linear map equation is T(x, y, z)=(4, 2) is consistent as b=(4, 2)&isin;Range(T).
+The linear map equation is T(x, y, z)=(4, 2) is consistent as b=(4, 2)&isin;Range(T). <br>
+
 <b>Uniqueness of linear map equation:</b>
 Solution of linear map equation T(x, y, z)=(4, 2) is not unique as both (4, 0, 2) and (6, 2, 0) map to (4, 2). Notice that T is not one-to-one. <br>
+
 <b>Understanding:</b>
 As b≡(4, 2)&isin;Range(T), (4, 2) which is the last column vector of A<sup>+</sup> is a linear combination of column vectors of A. This implies that RankA=RankA<sup>+</sup>.
 ##### 6.5. Remark:
