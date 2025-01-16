@@ -1,11 +1,11 @@
-EMPTY
-<!-- Remove all lines above this line before making changes to the file -->
+
 ### Subject Matter Experts
-| SNo. | Name | Email | Institute | ID |
+| SNo. | Name | Email | Faculty | Institute  |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 | name | email | institute | id |
+| 1 | Prof. Gunjan Agrawal | dei.gunjan@yahoo.com | Faculty of Science | Dayalbagh Educational Institute |
 
 ### Developers
-| SNo. | Name | Email | Institute | ID |
+| SNo. | Name | Email | Faculty | Institute |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 | name | email | institute | id |
+| 1 | A Gurucharan| gurucharan1027@gmail.com | Faculty of Science | Dayalbagh Educational Institute | 
+| 2 | Shinu Pachauri | shinupachouri520@gmail.com | Faculty of Science | Dayalbagh Educational Institute |
