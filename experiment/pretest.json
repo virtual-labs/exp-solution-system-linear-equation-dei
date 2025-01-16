@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Let $A=\\begin{bmatrix} 1  & -1 & 0 \\\\0 & 1 & -1 \\end{bmatrix}$ and $B=\\begin{bmatrix} -1 \\\\ -1 \\\\ -2 \\end{bmatrix}$. Then A.B equals",
+      "question": "Let $A=\\begin{bmatrix} 1  & -1 & 0 \\\\ 0 & 1 & -1 \\end{bmatrix}$ and $B=\\begin{bmatrix} -1 \\\\ -1 \\\\ -2 \\end{bmatrix}$. Then A.B equals",
       "answers": {
         "a": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
         "b": "$\\begin{bmatrix} -2 \\\\ 3 \\\\ 0 \\end{bmatrix}$",
@@ -46,36 +46,36 @@
       "difficulty": "beginner"
     },
     {
-        "question": "Consider a system of linear equations represented by AX=B, where A is an invertible matrix of order n×n. Then the system has",
+        "question": "Let $A=\\begin{bmatrix} 1  & 1 & 0 \\\\ 0 & 1 &  0 \\\\ 0 & 0 & 0 \\end{bmatrix}$",
       "answers": {
-        "a": "One and only one solution",
-        "b": "Infinitely many solutions",
-        "c": "Exactly two solutions",
-        "d": "Finite but more than two solutions"
+        "a": "A is invertible and A^2 is invertible",
+        "b": "A is not invertible and A^2 is invertible",
+        "c": "A is invertible and A^2 is not invertible",
+        "d": "A is not invertible and A^2 is also not invertible"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the system of two linear equations in three variables given by $x_1+x_2=3$ and $x_1+x_2+x_3=0$. Then",
+      "question": "Let $A=\\begin{bmatrix} 1  & 1 & 0 \\\\ 1 & -1 &  1 \\\\ 2 & 1 & 0 \\end{bmatrix}$",
       "answers": {
-        "a": "System is consistent and has unique solution",
-        "b": "System is consistent and has finitely many solutions",
-        "c": "System is consistent and has infinitely many solutions ",
-        "d": "System is inconsistent"
+        "a": "det(A)=2 and det(A^{-1}) does not exist",
+        "b": "det(A)=-1 and det(A^{-1}) exists",
+        "c": "det(A)=1and det(A^{-1}) exists",
+        "d": "None of the above"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "Consider the system of three linear equations in two variables given by $x_1+x_2=3, x_{1}-2x_2=-6$ and $x_1+3x_2=6$. Then",
+      "question": "Let $A=\\begin{bmatrix} 4  & -1 \\\\ 12 & -3 \\end{bmatrix}$",
        "answers": {
-        "a": "System is consistent and has unique solution",
-        "b": "System is consistent and has finitely many solutions",
-        "c": "System is consistent and has infinitely many solutions ",
-        "d": "System is inconsistent"
+        "a": "A is invertible and A=A^2",
+        "b": "A is not invertible and A=A^2",
+        "c": "A is invertible and A≠A^2",
+        "d": "None of the above"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
