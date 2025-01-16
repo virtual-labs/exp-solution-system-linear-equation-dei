@@ -20,29 +20,29 @@
         "c": "2 & 2",
         "d": "0 & 1"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Let $A=\\begin{bmatrix} -1 & 1 & 0 \\\\ 0 & 1 & 0 \\end{bmatrix}$. Then for which B the matrix equation AX=B is inconsistent ",
-      "answers": {
-        "a": "B&isin;Range(T)",
-        "b": "B&isin;Null space(T)",
-        "c": "B=0 0",
-        "d": "None of the above"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Consider the consistent matrix equation AX=B, where A is a 2×3 and B= 0 0. Let T:R^3→R^2 be the linear transformation w.r.t. the standard basis associated with the matrix A. Then ",
-      "answers": {
-        "a": "$x \\notin Range(T)$",
-        "b": "$x \\notin Null space(T)$",
-        "c": "X = (0, 0, 0)",
-        "d": "None of the above"
-      },
       "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let A be a matrix of order n×m and the B be a matrix of order n×(m+1) such that the first n column of B are same as that of A. Then",
+      "answers": {
+        "a": "RankA≤RankB",
+        "b": "RankA=RankB",
+        "c": "RankA≥RankB",
+        "d": "RankB is not defined"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $A=\\begin{bmatrix} 1  & -1 & 0 \\\\0 & 1 & -1 \\end{bmatrix}$ and $B=\\begin{bmatrix} -1 \\\\ -1 \\\\ -2 \\end{bmatrix}$. Then A.B equals",
+      "answers": {
+        "a": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+        "b": "$\\begin{bmatrix} -2 \\\\ 3 \\\\ 0 \\end{bmatrix}$",
+        "c": "$\\begin{bmatrix} 2 \\\\ 3 \\end{bmatrix}$",
+        "d": "Not defined"
+      },
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
