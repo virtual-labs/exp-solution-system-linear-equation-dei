@@ -5,7 +5,8 @@ dx<sub>1</sub>+fx<sub>2</sub>+gx<sub>3</sub>=s       … (i) <br>
 Note that in particular, if both r and s=0, then the system of linear equations (i) reduces to <br>
 ax<sub>1</sub>+bx<sub>2</sub>+cx<sub>3</sub>=0 <br>
 dx<sub>1</sub>+fx<sub>2</sub>+gx<sub>3</sub>=0       … (ii) <br>
-This is called a homogenous system of two linear equations in three variables. <br>
+This is called a homogenous system of two linear equations in three variables.
+It is well known that various physical situations are modelled in terms of systems of linear equations. <br>
 #### 2. Coefficient matrix and augmented matrix: 
 $$
 \begin{aligned}
