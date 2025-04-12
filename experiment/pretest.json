@@ -29,7 +29,7 @@
         "a": "RankA≤RankB",
         "b": "RankA=RankB",
         "c": "RankA≥RankB",
-        "d": "RankB is not defined"
+        "d": "RankA=m & RankB=m+1"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
@@ -62,7 +62,7 @@
         "a": "det(A)=2 and det(A^{-1}) does not exist",
         "b": "det(A)=-1 and det(A^{-1}) exists",
         "c": "det(A)=1and det(A^{-1}) exists",
-        "d": "None of the above"
+        "d": "det(A)=1 and det(A^{-1}) does not exist"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
@@ -73,7 +73,7 @@
         "a": "A is invertible and A=A^2",
         "b": "A is not invertible and A=A^2",
         "c": "A is invertible and A≠A^2",
-        "d": "None of the above"
+        "d": "A is not invertible and A=A^3"
       },
       "correctAnswer": "b",
       "difficulty": "beginner"
