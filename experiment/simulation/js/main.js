@@ -140,48 +140,6 @@ function showexp() {
 }
 
 
-function amat() {
-  if (!formSubmitted) {
-            alert("Please enter and submit all the values.");
-            return;
-        }
-  
-  let  a = parseInt(document.getElementById("a").value);
-  let  b = parseInt(document.getElementById("b").value);
-  let  c = parseInt(document.getElementById("c").value);
-  let  b1 = parseInt(document.getElementById("b1").value); 
-  let  d = parseInt(document.getElementById("d").value);
-  let  e = parseInt(document.getElementById("e").value);
-  let  f = parseInt(document.getElementById("f").value);
-  let  b2 = parseInt(document.getElementById("b2").value);
-
-  var isValid = true;
-    var inputs = document.getElementsByClassName("eqn");
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === "") {
-            isValid = false;
-            break;
-        }
-    }
-
-    // Display alert if any input is empty
-    if (!isValid) {
-        alert("Please enter and submit all the values.");
-    } else {
-
-// Display the result
-//document.getElementById("calcbtn2").style.display="block";
-//   document.getElementById('result').innerHTML = "AX = B <br> where," ;
-//   document.getElementById("mat").innerHTML ="\\[ A =  \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix} \\ ,  B =  \\begin{pmatrix} "+b1+" \\\\"  + b2+"\\end{pmatrix}, X = \\begin{pmatrix} x1 \\\\ x2 \\\\ x3  \\end{pmatrix} \\]";
-document.getElementById("amat").innerHTML ="\\[ A &#8314; = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" & "+ "| " +b1+ "\\\\"  + d+"&" + e+"&"+   f+" & "+ "| " +b2 + "\\end{pmatrix} \\]" ;
-MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-//     document.getElementById('result2').innerHTML = "<b>Linear map T associated with A : </b> <br>T:R<sup>3</sup> &rarr; R<sup>2</sup><br>Let B<sub>1</sub> = {(1,0,0), (0,1,0), (0,0,1)} for R<sup>3</sup>, B<sub>2</sub> = {(1,0), (0,1)} for R<sup>2</sup>" ;
-//     document.getElementById('te1').innerHTML = "T((0,0,1)) = " +a+ "(1, 0) + " +d+ "(0, 1)  <br>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1)  <br>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)" ;
-//    document.getElementById('ty').innerHTML = "T(y) = b <br> T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ " y<sub>3</sub> ) , (" +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ " y<sub>3</sub> ) ";
-   
-    }
-    
-}
 
 var grid_size = 12;
 var x_axis_distance_grid_lines = 10;
@@ -397,11 +355,11 @@ function lmeqe() {
   
   //document.getElementById('rankres2').innerHTML = `Rank A<sup>+</sup> = ${rank2}`;
   if(rank == rank2) {
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>Rank A = Rank A<sup>+</sup></span> <br><span style='margin-left: 2rem; border:1.5px solid green; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'> System is <span style='background-color:yellow;'> consistent</span></span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A = Rank A<sup>+</sup></span> <br><span style='margin-left: 2rem; border:1.5px solid green; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'>&rArr;  System of linear equations is <span style='background-color:yellow;'> consistent</span></span>";
     
   }
   else{
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>Rank A &ne; Rank A<sup>+</sup></span><br><span style=' margin-left: 2rem; border:1.5px solid red; padding-left: 0.2rem; padding-right:0.2rem;'>System is <span style='background-color:yellow;'>inconsistent</span> </span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>Rank A &ne; Rank A<sup>+</sup></span><br><span style=' margin-left: 2rem; border:1.5px solid red; padding-left: 0.2rem; padding-right:0.2rem;'>System of linear equations is  <span style='background-color:yellow;'>inconsistent</span> </span>";
   }}
     // document.getElementById("note").innerHTML="&#8658; b &isin; RangeT <br> Linear map equation (T(y)) is consistent";
     // ctx.beginPath();
@@ -472,9 +430,23 @@ if (!formSubmitted) {
     } else {
 // Display the result
 //document.getElementById("calcbtn2").style.display="block";
-document.getElementById('result').innerHTML = "<span style='padding-left: 1rem;'>AX = B, where</span>" ;
-document.getElementById("mat3").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+
+document.getElementById("mat3").innerHTML = `
+<div style="text-align: left; margin-bottom:10px">
+  \\( \\bullet \\quad A = \\begin{pmatrix} ${a} & ${b} & ${c} \\\\ ${d} & ${e} & ${f} \\end{pmatrix} \\quad \\text{(called the coefficient matrix)} \\)
+</div>
+<div style="text-align: left;margin-bottom:10px">
+  \\( \\bullet \\quad B = \\begin{pmatrix} ${b1} \\\\ ${b2} \\end{pmatrix} \\quad \\)
+</div>
+<div style="text-align: left;">
+  \\( \\bullet \\quad A^{+} = \\begin{pmatrix} A | B \\end{pmatrix} = \\begin{pmatrix} ${a} & ${b} & ${c} & \\vert ${b1} \\\\ ${d} & ${e} & ${f} & \\vert ${b2} \\end{pmatrix} \\quad \\text{(called the augmented matrix)} \\)
+</div>
+`;
+
+MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+
+
+
     document.getElementById('result2').innerHTML = "<span style='padding-left: 1rem;'><b>Linear map associated with A : </b> </span><br><span style='padding-left: 2rem;'><ul><li>To define the desired linear map T:R<sup>3</sup>&rarr; R<sup>2</sup></li><li>B<sub>1</sub> = {(1,0,0), (0,1,0), (0,0,1)} for R<sup>3</sup>, B<sub>2</sub> = {(1,0), (0,1)} for R<sup>2</sup></span></li></ul>" ;
     document.getElementById('te1').innerHTML = "<span style='padding-left: 2rem;'><ul><li>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) </span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)</li></ul></span>" ;
    document.getElementById('ty').innerHTML = "<span style='padding-left: 2rem;'><ul><li>T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ "y<sub>3</sub>, " +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ "y<sub>3</sub>);<br> y = (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>) &isin; R<sub>3</sub></li></ul></span>";
