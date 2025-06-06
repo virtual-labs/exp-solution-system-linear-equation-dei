@@ -1,4 +1,4 @@
-1.	 Enter co-efficients to choose a system of two linear equations in three unknowns and press “Submit” button to move further.
+1.	Enter co-efficients to choose a system of two linear equations in three unknowns and press “Submit” button to move further.
 2.	Click on “System of linear equation under consideration” button to display the system of linear equations for which you just entered the values.
 3.	Click on “Related matrices” button to understand the three matrices associated with the chosen system of linear equations.
 4.	Click on “Consistency of chosen system of linear equations” button to determine and understand whether the given system is consistent or not.
