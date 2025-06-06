@@ -1,9 +1,9 @@
-1. Enter co-efficients to choose a system of two linear equations in three unknowns and press “Submit” button to move further.<br>
-2. Click on “System of linear equation under consideration” button to see the chosen system of linear equations.<br>
-3. Click on “Related matrices” button to understand the matrices associated with the  chosen system of linear equations.<br>
-5. Click on “Consistency of chosen system of linear equations” button to see whether the given system is consistent or not.<br>
-6. Click on “Click here” button or “Next page” button to go to the next page to go through “Illustration to understand the formula for consistency”.<br>
-7. Go through the equivalent matrix equation and equivalent linear map equation. Notice that the values are based on previously submitted values on page one.<br>
-8. Next section explains the consistency of linear map equation through diagram.<br>
-9. Formula for consistency of system of linear equations is provided in the next section through the link between system of linear equations, matrix equation and linear map equation. This is the crux of the understanding of consistency of system of linear equations.<br>
-10. Go through the remaining content on the page to complete the objective.<br>
+1.	On the first page, go through “Given” and “To Discuss” information
+2.	Click on “Existence” button to learn existence and “Uniqueness” button to learn uniqueness of solution of a linear map equation. It is explained through diagrams
+3.	Click on the “Next” button to go to the next page which provides an opportunity for hands on experience to practice solution of a linear map equation.
+4.	First go through the given linear map and its geometry. All the linear map equations on this page are related to this linear map.
+5.	For Equation 1, click on “Consistent” button if you feel the equation is consistent otherwise click on “Inconsistent”.
+6.	For all solutions in case of consistent linear map equation, enter the values of p and q and click on “check answer” button to check whether (p, q) is a solution. The reason is also provided.
+7.	Repeat the same process for Equation 2.
+8.	Click on the “Construction of More Equations” button to practice with new equations.
+9.	Enter the values for r and s and click on “submit” button to get the new equation, its geometry and consistency.
