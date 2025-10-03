@@ -71,6 +71,9 @@
     input{
         font-size: 20px;
     }
+    .inp{
+      font-size: 15px;
+    }
     .secont {
     display: flex;
     flex-wrap: wrap;
@@ -117,21 +120,83 @@
   background-color: #ada;
   color: black;
 }
-  
- 
+.note{
+  color: blue;
+  font-size: 1rem;
+  margin-left: 10px;
+}  
+ #mat3{
+  background-color: yellow;
+ }
 </style>
 <body>
-   <h2 class="pagehead">System of Linear Equations</h2>
+   <h2 class="pagehead">Illustration to understand the formula for consistency</h2>
 <div class="container">
    
-      <button class="subbtn" id="illustration" style="background-color:rgb(115, 233, 113); font-weight: 700; font-size: 30px; font-family: 'Times New Roman', Times, serif;" onclick="illustration()">Illustration to understand the formula for consistency</button>
-      
-      <p id="eql_ME"></p>
+      <!-- <button class="subbtn" id="illustration" style="background-color:rgb(115, 233, 113); font-weight: 700; font-size: 30px; font-family: 'Times New Roman', Times, serif;" onclick="illustration()">Illustration to understand the formula for consistency</button> -->
+         <p class="note">(Note: The values shown on this page are based on the selections you made on the previous page. If you change the values on the first page, the values on this page will also change. The dynamically changing values are highlighted with a yellow background.)</p>
+
+       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Recall:</b></li></ul>
       <p id="mat3"></p>
-      <p id="result2" style="margin: 0;"></p>
-      <p id="te1" style="margin: 0;"></p>
-      <p id="ty"></p>
-      <p id="ty1"></p>
+   
+      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear transformation T (associated with A w.r.t standard basis):</b></li></ul>
+      <p>&emsp;&emsp; T:R<sup>3</sup> &rarr; R<sup>2</sup> is defined by</p>
+      <p id="ty" style='padding-left: 3.3rem; background-color: yellow;'></p>
+      
+       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Matrix equation (Equivalent to the system of linear equations):</b>
+      <select id="q1" style="font-size: 15px;">
+      <option value="">--Select an option--</option>
+      <option value="a">X = B</option>
+      <option value="b">AX = B</option>
+      <option value="c">BX = A</option>
+      <!-- <option value="notinjective">T is Onto</option> -->
+    </select>
+    <button class="subbtn1" onclick="checkAnswer()">Submit</button>
+    <p id="result" style="font-size: 24px;"></p></li></ul>
+      
+      
+        <!-- <br><p style='padding-left: 5rem; margin-left:30%; padding:0;'>AX = B</p> -->
+     
+      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear map equation (Equivalent to the system of linear equations):</b> <select id="q2" style="font-size: 15px;">
+      <option value="">--Select an option--</option>
+      <option value="a">T = b</option>
+      <option value="b">b(x) = T</option>
+      <option value="c">T(x) = b</option>
+    </select>
+  <button class="subbtn1" onclick="checkAnswer2()">Submit</button>
+    <p id="result2.1" style="font-size: 24px;"></p>
+  </li></ul>
+      
+    
+      </p>
+      <button class="subbtn1" style="margin-left: 4rem;" onclick="reasonAns()">Reason</button>
+      <p id="result2" style="margin: 0; display:none;"></p>
+      <p id="te1" style="margin: 0; display: none;"></p>
+      
+      <p id="ty1">  <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Consistency of linear map equation:</b></li></ul>
+        
+        <ul style='padding-left: 4rem; padding-top:14px; font-size:23px;'>
+        <li>
+              <input class="inp" id="btn11" type="submit" onclick="bRange('btn11');" value="b ∈ RangeT">
+                    /
+              <input class="inp" id="btn12" type="submit" onclick="bnRange('btn12');" value="b &#x2209; Range T"><span id='consiss'></span>
+
+              
+        </li>
+                    
+                    
+        <li style='margin-bottom:5px;'>
+              <input class="inp" id="btn13" type="submit" onclick="consis('btn13');" value="Consistent">
+                    /
+              <input class="inp" id="btn14" type="submit" onclick="inconsis('btn14');" value="Not consistent"><span id='consiss2'></span>
+
+              <p id="ans2"></p>
+        
+        </li></ul>
+                    
+      <p style='font-size:20px; color:blue; padding-left:4rem; margin:3px;'>See the diagram below</p></span></p>
+      
+
       <p id="note1"></p>
       
       <div class="secont">
@@ -147,18 +212,23 @@
 
           
        
-      <p id="note3"></p>
+      
       <p id="note"></p>
       
       <p id="finalres"></p>
-     
-      <a href="javascript:calculateRank()" class="subbtn2" id="calcbtn2" style="display:none;">Shortcut</a>
-      <p id="mat2"></p>
-      
-     
-      
-      
-  
+      <p id="note3"><ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Summary:</b></li></ul>
+        <p style='margin-left: 3rem;'>Conditions for consistency:</p>
+        <ul style='padding-left:8rem;'>
+          <li>AX = B is consistent &hArr; Rank A = Rank A &#8314; </li>
+          <li>T(x) = b is consistent &hArr; b &isin; Range T </li>
+          <li>Rank A = Rank A &#8314; &hArr; b &isin; Range T</li></ul>
+
+          <p style='margin-left: 3rem;'>Following are equivalent:</p>
+          <ul style='padding-left:8rem;'>
+          <li>System of linear equations is consistent</li>
+            <li>AX = B is consistent </li>
+            <li>T(x) = b is consistent</li></ul>
+          </p>
       </div>
       
 
@@ -170,6 +240,136 @@
 </body>
 
 <script>
+function bRange(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+        document.getElementById("consiss").innerHTML="&emsp; Correct. <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
+        document.getElementById("btn11").style.backgroundColor="lightgreen";
+        document.getElementById("btn12").style.backgroundColor="";
+       
+       
+    }
+      else{
+        document.getElementById("consiss").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
+        document.getElementById("btn11").style.backgroundColor="red";
+         document.getElementById("btn12").style.backgroundColor="";
+       
+    }
+
+
+}
+
+
+function bnRange(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+        document.getElementById("consiss").innerHTML="&emsp; Incorrect! <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
+        document.getElementById("btn12").style.backgroundColor="red";
+        document.getElementById("btn11").style.backgroundColor="";
+       
+    }
+      else{
+        document.getElementById("consiss").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
+        document.getElementById("btn12").style.backgroundColor="lightgreen";
+        document.getElementById("btn11").style.backgroundColor="";
+       
+       
+       
+    }}
+
+
+    function consis(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+       
+        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
+        document.getElementById("btn13").style.backgroundColor="lightgreen";
+        document.getElementById("btn14").style.backgroundColor="";
+    }
+      else{
+        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
+        document.getElementById("btn13").style.backgroundColor="red";
+        document.getElementById("btn14").style.backgroundColor="";
+       
+    }
+
+
+}
+
+
+
+    function inconsis(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+       
+        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
+        document.getElementById("btn14").style.backgroundColor="red";
+        document.getElementById("btn13").style.backgroundColor="";
+    }
+      else{
+        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
+        document.getElementById("btn14").style.backgroundColor="lightgreen";
+        document.getElementById("btn13").style.backgroundColor="";
+       
+    }}
+//  function bRange(){
+//        document.getElementById('ans1').innerHTML='CORRECT!';
+//        document.getElementById('ans1.1').innerHTML='';
+       
+        
+//    }
+//    function bnRange(){
+//        document.getElementById('ans1.1').innerHTML='INCORRECT!';
+//        document.getElementById('ans1').innerHTML='';}
+       
 
 var grid_size = 12;
 var x_axis_distance_grid_lines = 10;
@@ -316,7 +516,7 @@ ctx.stroke();
 
 
       
-            const a = localStorage.getItem("a");
+        const a = localStorage.getItem("a");
         const b = localStorage.getItem("b");
         const c = localStorage.getItem("c");
         const d = localStorage.getItem("d");
@@ -341,49 +541,53 @@ ctx.stroke();
         if (!isValid) {
             alert("Please enter and submit all the values.");
         } else {
-    // Display the result
-    //document.getElementById("calcbtn2").style.display="block";
-   
-        document.getElementById('result2').innerHTML = "<span style='padding-left: 1rem; font-size:28px;'><b>&#10148; Equivalent linear map equation:</b> </span><br><span style='padding-left: 2rem;'><ul style='padding-left: 4rem;'><p>The Linear map equation equivalent to the matrix equation corresponding to the given system of linear equations is given by</p><p style=margin-left:27%>T(x) = b </p> where  T:R<sup>3</sup>&rarr; R<sup>2</sup> is the linear transformation associated with the matrix A with respect to the basis B<sub>1</sub> = {(1,0,0), (0,1,0), (0,0,1)} for R<sup>3</sup>, B<sub>2</sub> = {(1,0), (0,1)} for R<sup>2</sup> and b = ( "+b1+", "+b2+" ) &isin; R<sup>2</sup></span></li> <br>[ Precisely T:R<sup>3</sup>&rarr; R<sup>2</sup> is given by</ul>" ;
-        document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'><li>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</li></ul>" ;
-       document.getElementById('ty').innerHTML = "<ul style='padding-left: 4rem;'><li>T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ "y<sub>3</sub>, " +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ "y<sub>3</sub>);  y = (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>) &isin; R<sub>3</sub> ]</li></ul>";
-       document.getElementById('ty1').innerHTML= "<span style='padding-left: 1rem;font-size:28px;'><b>&#10148; Consistency of linear map equation: </b>&emsp;&emsp;<ul style='padding-left: 4rem; padding-top:14px; font-size:23px;'><li><b>Range T: </b><span id='consis'></span></li><li style='margin-bottom:5px;'><b>Consistency: </b><span id='consis2'></span></li></ul><p style='font-size:20px; color:blue; padding-left:4rem; margin:3px;'>(See the diagram below)</p></span>";
+       
+        document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</ul>" ;
+       document.getElementById('ty').innerHTML = "T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ "y<sub>3</sub>, " +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ "y<sub>3</sub>);  y = (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>) &isin; R<sup>3</sup>";
+      
        
        
-    //document.getElementById("note").innerHTML="&#8658; b &isin; RangeT <br> Linear map equation (T(y)) is consistent";
+  
     if(rank == rank2) {
-        document.getElementById("consis").innerHTML="<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
-        document.getElementById("consis2").innerHTML="<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
-        document.getElementById("note3").innerHTML="<b style='padding-left:1rem; font-size:29px'>&#10148;Formula for consistency of system of linear equations:</b> <br><span style='padding-left: 5rem;'>Following are equivalent<span> <br><ul style='padding-left:8rem;'><li>System of linear equations is consistent</li><li>Matrix equation is consistent, i.e. Rank A = Rank A &#8314; </li><li>Linear map equation is consistent, i.e. b &isin; Range T </li></ul></span>";
-        document.getElementById('eql_ME').innerHTML = "<b style='padding-left:1rem; font-size:28px'>&#10148;  Equivalent matrix equation:</b> <br><p style='padding-left: 5rem; margin-left:30%; padding:0;'>AX = B</p><br><p style='padding-left: 5rem; margin:0;'>where</p>" ;
-        document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
+        
+       
+        document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} " +a+ " & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},&emsp;X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix},&emsp;B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
         MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         document.getElementById("note").innerHTML = `
+         <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+            <b>Consistency of matrix equation:</b>
+          <span style=" margin-left:1rem; background-color: yellow; ">
+            <b>Consistent</b>
+          </span></li></ul>
+          `;
+        document.getElementById("finalres").innerHTML = `<ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+          <span style='margin-right: 1rem; background-color:lightgreen;'>
+            <b>Consistency of chosen system of linear equations:</b>
+          </span>
+          <span style='background-color:yellow;'>
+            <b>Consistent</b>
+          </span></li></ul>`;
+
+        
+    }
+      else{
+       
+        document.getElementById("mat3").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+         document.getElementById("note").innerHTML = `
           <span style="font-size: 28px; padding-left: 1rem; background-color: lightgreen;">
-            <b>&#10148; Consistency of Matrix Equation:</b>
+            <b>&#10148; Consistency of matrix equation:</b>
           </span>
           <span style="font-size: 28px; margin-left: 1rem; color: black; background-color: yellow; ">
-            <b>Consistent</b>
+            <b>Inonsistent</b>
           </span>`;
         document.getElementById("finalres").innerHTML = `
           <span style='font-size:28px; padding-left: 1rem; margin-right: 2rem; background-color:lightgreen;'>
-            <b>&#10148; Consistency of Chosen System of Linear Equations:</b>
+            <b>&#10148; Consistency of chosen system of linear equations:</b>
           </span>
-          <span style='font-size:28px; text-align:center; margin-left:1rem; color: black; background-color:yellow;'>
-            <b>Consistent</b>
+          <span style='font-size:28px; text-align:center; color: black; background-color:yellow;'>
+            <b>Inconsistent</b>
           </span>`;
-
-        // document.getElementById("finalres").innerHTML="<span style='text-align:center; margin-left:5.5rem; margin-right:5.5rem; justify-content:center; display:block; font-weight: bold; padding-left: 0.5rem; padding-right:0.5rem; color: Black; background-color:yellow;'>Consistent</span>";
-    }
-      else{
-        document.getElementById("consis").innerHTML="<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
-        document.getElementById("consis2").innerHTML="<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
-        document.getElementById("note3").innerHTML="<b style='padding-left:1rem; font-size:28px'>&#10148; Consistency of system of linear equations:</b><span style='padding-left: 5rem;'>Following are equivalent<span> <br><ul><li>Linear map equation is consistent</li><li>Linear map equation is consistent </li><li>Matrix equation is consistent </li></ul></span>";
-        document.getElementById('eql_ME').innerHTML = "<b style='padding-left:1rem; font-size:28px'>&#10148;  Equivalent matrix equation:</b> <br><span style='padding-left: 5rem;'>AX = B, where</span>" ;
-        document.getElementById("mat3").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-        document.getElementById("note").innerHTML="<span style=' font-size:28px; padding-left: 1rem;'><b>&#10148; Consistency of Matrix Equation and the Chosen <span style='background-color:yellow;''>System of Linear Equations</span>: </b></span>";
-        document.getElementById("finalres").innerHTML="<span style=' text-align:center; margin-left:5.5rem; margin-right:5.5rem; justify-content:center; display:block; font-weight: bold; margin-top: 2rem; padding-left: 0.5rem; padding-right:0.5rem; color:red; '>INCONSISTENT</span>"
     }
       
  
@@ -413,7 +617,42 @@ ctx.stroke();
        document.getElementById('ty2').innerHTML="<b>Consistency of the chosen system of linear equation: </b><br>"
         
   }
+ function checkAnswer() {
+      const ans = document.getElementById("q1").value;
+      const result = document.getElementById("result");
 
+      if (ans === "b") {
+        result.innerHTML = "&emsp;&emsp;✅ Correct!";
+        result.style.color = "green";
+      } else if (ans === "") {
+        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
+        result.style.color = "orange";
+      } else {
+        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is AX = B";
+        result.style.color = "red";
+      }
+    }
+
+    function checkAnswer2() {
+      const ans = document.getElementById("q2").value;
+      const result = document.getElementById("result2.1");
+
+      if (ans === "c") {
+        result.innerHTML = "&emsp;&emsp;✅ Correct!";
+        result.style.color = "green";
+      } else if (ans === "") {
+        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
+        result.style.color = "orange";
+      } else {
+        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is T(x) = b";
+        result.style.color = "red";
+      }
+    }
+
+    function reasonAns(){
+      document.getElementById("result2").style.display="";
+       document.getElementById("te1").style.display="";
+    }
   </script>
 </html>
 

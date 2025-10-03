@@ -350,16 +350,16 @@ function lmeqe() {
     if (!isValid) {
         alert("Please enter and submit all the values.");
     } else {
-  document.getElementById('rankres').innerHTML = `<span style='padding-left: 2rem;'>Rank A = ${rank} </span> <br><span style='padding-left: 2rem;'>Rank A<sup>+</sup> = ${rank2}</span>`;
+  document.getElementById('rankres').innerHTML = `<span style='padding-left: 3.8rem;'>Rank A = ${rank} </span> <br><span style='padding-left: 3.8rem;'>Rank A<sup>+</sup> = ${rank2}</span>`;
   
   
   //document.getElementById('rankres2').innerHTML = `Rank A<sup>+</sup> = ${rank2}`;
   if(rank == rank2) {
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A = Rank A<sup>+</sup></span> <br><span style='margin-left: 2rem; border:1.5px solid green; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'>&rArr;  System of linear equations is <span style='background-color:yellow;'> consistent</span></span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A = Rank A<sup>+</sup></span> <br><span style='margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'>&rArr; System of linear equations is <span style='background-color:yellow;'> consistent</span></span>";
     
   }
   else{
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>Rank A &ne; Rank A<sup>+</sup></span><br><span style=' margin-left: 2rem; border:1.5px solid red; padding-left: 0.2rem; padding-right:0.2rem;'>System of linear equations is  <span style='background-color:yellow;'>inconsistent</span> </span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A &ne; Rank A<sup>+</sup></span><br><span style=' margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem;'>System of linear equations is  <span style='background-color:yellow;'>inconsistent</span> </span>";
   }}
     // document.getElementById("note").innerHTML="&#8658; b &isin; RangeT <br> Linear map equation (T(y)) is consistent";
     // ctx.beginPath();
