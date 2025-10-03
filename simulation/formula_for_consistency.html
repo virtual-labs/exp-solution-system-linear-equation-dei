@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="css/">
+   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="../simulation/js/ffc_main2.js"></script>
+  <link rel="stylesheet" href="../simulation/css/ffc_style2.css">
+
+</head>
+<style>
+    body{
+        width: 100%;
+        height: 100vh;
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center;
+        /*background: linear-gradient(45deg, #0a0a0a, #3a4452);*/
+        background-color: lightyellow;
+        font-size: 1.5rem;
+    }
+    .pagehead{
+      display: block;
+      text-align: center;
+      border-top: 2px solid lightseagreen;
+      background: linear-gradient(yellow, lightseagreen);
+      padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+      float:center;
+      margin: 0.5rem;
+      font-size: 35px;
+    }
+    .eqn{
+        width: 3rem;
+    }
+    #mat3{
+      font-size: 20px;
+      
+    }
+    .container{
+        /*border: 1px solid #717377;*/
+        padding: 1rem;
+        border-radius: 1.2rem;
+        background-color: whitesmoke;
+        margin-left: 15%;
+        margin-right: 15%;
+        /*background: transparent;
+        background: linear-gradient(45deg, #0a0a0a, #3a4452);*/
+        box-shadow: 0px 3px 15px rgba(133, 115, 119, 0.5);
+    }
+    .container:hover{
+        border-radius: 0.5rem;
+        box-shadow: 0px 3px 15px rgba(133, 115, 119, 1.0);
+    }
+    .subbtn{
+        height:auto;
+        width:auto;
+        background-color:#81cdc6;
+        font-size: 1.5rem;
+        border: 1px solid teal;
+        margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+    }
+    .subbtn:hover{
+        background: linear-gradient(90deg, #81cdc6);
+        color: white;
+        box-shadow: 0px 3px 15px rgba(10, 11, 19, 0.5);
+    }
+    .subbtn2{
+       background-color: none;
+    }
+    input{
+        font-size: 20px;
+    }
+    .inp{
+      font-size: 15px;
+    }
+    .secont {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 63px;
+  
+  }
+  #te1{
+    margin: 0;
+    padding-top: 10px;
+  }
+  #ty{
+    margin-top: 9px;
+  }
+
+  .section {
+    flex-basis: calc(50% - 20px);
+   
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 768px) {
+    .section {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+  ul{
+    margin: 0;
+  }
+  .previous{
+    display: block;
+    float:left;
+    background-color: #04AA6D;
+    color: white;
+    font-size: 18px;
+    margin-top: 0.5rem;
+    align-content: center;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    width:8rem;
+}
+.previous:hover {
+  background-color: #ada;
+  color: black;
+}
+.note{
+  color: blue;
+  font-size: 1rem;
+  margin-left: 10px;
+}  
+ #mat3{
+  background-color: yellow;
+ }
+</style>
+<body>
+   <h2 class="pagehead">Illustration to understand the formula for consistency</h2>
+<div class="container">
+   
+      <!-- <button class="subbtn" id="illustration" style="background-color:rgb(115, 233, 113); font-weight: 700; font-size: 30px; font-family: 'Times New Roman', Times, serif;" onclick="illustration()">Illustration to understand the formula for consistency</button> -->
+         <p class="note">(Note: The values shown on this page are based on the selections you made on the previous page. If you change the values on the first page, the values on this page will also change. The dynamically changing values are highlighted with a yellow background.)</p>
+
+       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Recall:</b></li></ul>
+      <p id="mat3"></p>
+   
+      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear transformation T (associated with A w.r.t standard basis):</b></li></ul>
+      <p>&emsp;&emsp; T:R<sup>3</sup> &rarr; R<sup>2</sup> is defined by</p>
+      <p id="ty" style='padding-left: 3.3rem; background-color: yellow;'></p>
+      
+       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Matrix equation (Equivalent to the system of linear equations):</b>
+      <select id="q1" style="font-size: 15px;">
+      <option value="">--Select an option--</option>
+      <option value="a">X = B</option>
+      <option value="b">AX = B</option>
+      <option value="c">BX = A</option>
+      <!-- <option value="notinjective">T is Onto</option> -->
+    </select>
+    <button class="subbtn1" onclick="checkAnswer()">Submit</button>
+    <p id="result" style="font-size: 24px;"></p></li></ul>
+      
+      
+        <!-- <br><p style='padding-left: 5rem; margin-left:30%; padding:0;'>AX = B</p> -->
+     
+      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear map equation (Equivalent to the system of linear equations):</b> <select id="q2" style="font-size: 15px;">
+      <option value="">--Select an option--</option>
+      <option value="a">T = b</option>
+      <option value="b">b(x) = T</option>
+      <option value="c">T(x) = b</option>
+    </select>
+  <button class="subbtn1" onclick="checkAnswer2()">Submit</button>
+    <p id="result2.1" style="font-size: 24px;"></p>
+  </li></ul>
+      
+    
+      </p>
+      <button class="subbtn1" style="margin-left: 4rem;" onclick="reasonAns()">Reason</button>
+      <p id="result2" style="margin: 0; display:none;"></p>
+      <p id="te1" style="margin: 0; display: none;"></p>
+      
+      <p id="ty1">  <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Consistency of linear map equation:</b></li></ul>
+        
+        <ul style='padding-left: 4rem; padding-top:14px; font-size:23px;'>
+        <li>
+              <input class="inp" id="btn11" type="submit" onclick="bRange('btn11');" value="b ∈ RangeT">
+                    /
+              <input class="inp" id="btn12" type="submit" onclick="bnRange('btn12');" value="b &#x2209; Range T"><span id='consiss'></span>
+
+              
+        </li>
+                    
+                    
+        <li style='margin-bottom:5px;'>
+              <input class="inp" id="btn13" type="submit" onclick="consis('btn13');" value="Consistent">
+                    /
+              <input class="inp" id="btn14" type="submit" onclick="inconsis('btn14');" value="Not consistent"><span id='consiss2'></span>
+
+              <p id="ans2"></p>
+        
+        </li></ul>
+                    
+      <p style='font-size:20px; color:blue; padding-left:4rem; margin:3px;'>See the diagram below</p></span></p>
+      
+
+      <p id="note1"></p>
+      
+      <div class="secont">
+        <div class="section">
+          <canvas id="my-canvas" margin-left:2rem;" width="250" height="250"></canvas>
+        </div>
+        <div class="section">
+          
+          <p id="pnote"></p>
+        </div>
+      </div>
+            
+
+          
+       
+      
+      <p id="note"></p>
+      
+      <p id="finalres"></p>
+      <p id="note3"><ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Summary:</b></li></ul>
+        <p style='margin-left: 3rem;'>Conditions for consistency:</p>
+        <ul style='padding-left:8rem;'>
+          <li>AX = B is consistent &hArr; Rank A = Rank A &#8314; </li>
+          <li>T(x) = b is consistent &hArr; b &isin; Range T </li>
+          <li>Rank A = Rank A &#8314; &hArr; b &isin; Range T</li></ul>
+
+          <p style='margin-left: 3rem;'>Following are equivalent:</p>
+          <ul style='padding-left:8rem;'>
+          <li>System of linear equations is consistent</li>
+            <li>AX = B is consistent </li>
+            <li>T(x) = b is consistent</li></ul>
+          </p>
+      </div>
+      
+
+      
+
+    
+</div>
+<a href="./" class="previous">&laquo; Previous Page</a>
+</body>
+
+<script>
+function bRange(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+        document.getElementById("consiss").innerHTML="&emsp; Correct. <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
+        document.getElementById("btn11").style.backgroundColor="lightgreen";
+        document.getElementById("btn12").style.backgroundColor="";
+       
+       
+    }
+      else{
+        document.getElementById("consiss").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
+        document.getElementById("btn11").style.backgroundColor="red";
+         document.getElementById("btn12").style.backgroundColor="";
+       
+    }
+
+
+}
+
+
+function bnRange(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+        document.getElementById("consiss").innerHTML="&emsp; Incorrect! <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
+        document.getElementById("btn12").style.backgroundColor="red";
+        document.getElementById("btn11").style.backgroundColor="";
+       
+    }
+      else{
+        document.getElementById("consiss").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
+        document.getElementById("btn12").style.backgroundColor="lightgreen";
+        document.getElementById("btn11").style.backgroundColor="";
+       
+       
+       
+    }}
+
+
+    function consis(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+       
+        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
+        document.getElementById("btn13").style.backgroundColor="lightgreen";
+        document.getElementById("btn14").style.backgroundColor="";
+    }
+      else{
+        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
+        document.getElementById("btn13").style.backgroundColor="red";
+        document.getElementById("btn14").style.backgroundColor="";
+       
+    }
+
+
+}
+
+
+
+    function inconsis(){
+    const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      
+    if(rank == rank2) {
+       
+        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
+        document.getElementById("btn14").style.backgroundColor="red";
+        document.getElementById("btn13").style.backgroundColor="";
+    }
+      else{
+        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
+        document.getElementById("btn14").style.backgroundColor="lightgreen";
+        document.getElementById("btn13").style.backgroundColor="";
+       
+    }}
+//  function bRange(){
+//        document.getElementById('ans1').innerHTML='CORRECT!';
+//        document.getElementById('ans1.1').innerHTML='';
+       
+        
+//    }
+//    function bnRange(){
+//        document.getElementById('ans1.1').innerHTML='INCORRECT!';
+//        document.getElementById('ans1').innerHTML='';}
+       
+
+var grid_size = 12;
+var x_axis_distance_grid_lines = 10;
+var y_axis_distance_grid_lines = 5;
+var x_axis_starting_point = { number: 1, suffix: '' };
+var y_axis_starting_point = { number: 1, suffix: '' };
+
+var canvas = document.getElementById("my-canvas");
+
+var ctx = canvas.getContext("2d");
+
+var canvas_width = canvas.width;
+var canvas_height = canvas.height;
+
+var num_lines_x = Math.floor(canvas_width/grid_size);
+var num_lines_y = Math.floor(canvas_height/grid_size);
+        
+// Draw grid lines along X-axis
+for(var i=0; i<=num_lines_x; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == x_axis_distance_grid_lines) 
+        ctx.strokeStyle = "#000000";
+    else
+        ctx.strokeStyle = "#dcdcdc";
+    
+    if(i == num_lines_x) {
+        ctx.moveTo(0, grid_size*i);
+        ctx.lineTo(canvas_width, grid_size*i);
+    }
+    else {
+        ctx.moveTo(0, grid_size*i+0.5);
+        ctx.lineTo(canvas_width, grid_size*i+0.5);
+    }
+    ctx.stroke();
+}
+
+// Draw grid lines along Y-axis
+for(i=0; i<=num_lines_y; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == y_axis_distance_grid_lines) 
+        ctx.strokeStyle = "#000000";
+    else
+        ctx.strokeStyle = "#dcdcdc";
+
+    if(i == num_lines_y) {
+        ctx.moveTo(grid_size*i, 0);
+        ctx.lineTo(grid_size*i, window.canvas_height);
+    }
+    else {
+        ctx.moveTo(grid_size*i+0.5, 0);
+        ctx.lineTo(grid_size*i+0.5, canvas_height);
+    }
+    
+    ctx.stroke();
+}
+
+// Translate to the new origin. Now Y-axis of the canvas is opposite to the Y-axis of the graph. So the y-coordinate of each element will be negative of the actual
+ctx.translate(y_axis_distance_grid_lines*grid_size, x_axis_distance_grid_lines*grid_size);
+
+// Ticks marks along the positive X-axis
+for(i=1; i<(num_lines_y - y_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(grid_size*i+0.5, -3);
+    ctx.lineTo(grid_size*i+0.5, 3);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'start';
+    ctx.fillText(x_axis_starting_point.number*i + x_axis_starting_point.suffix, grid_size*i-2, 15);
+}
+
+// Ticks marks along the negative X-axis
+for(i=1; i<y_axis_distance_grid_lines; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-grid_size*i+0.5, -3);
+    ctx.lineTo(-grid_size*i+0.5, 3);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'end';
+    ctx.fillText(-x_axis_starting_point.number*i + x_axis_starting_point.suffix, -grid_size*i+3, 15);
+}
+
+// Ticks marks along the negative Y-axis
+for(i=1; i<( x_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-3, grid_size*i+0.5);
+    ctx.lineTo(3, grid_size*i+0.5);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'start';
+    ctx.fillText(-y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, grid_size*i+3);
+}
+
+// Ticks marks along the positive Y-axis
+for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-3, -grid_size*i+0.5);
+    ctx.lineTo(3, -grid_size*i+0.5);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'start';
+    ctx.fillText(y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, -grid_size*i+3);
+    // ctx.beginPath();
+    // ctx.arc(2*grid_size, -4*grid_size, 3, 0, 2 * Math.PI);
+    // ctx.fill();
+// ctx.moveTo(-10*grid_size, 20*grid_size);
+// ctx.lineTo(5*grid_size, -10*grid_size);
+
+// Draw the Path
+ctx.stroke();
+    
+}
+ 
+    
+
+
+      
+        const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+      var isValid = true;
+        var inputs = document.getElementsByClassName("eqn");
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value === "") {
+                isValid = false;
+                break;
+            }
+        }
+
+        // Display alert if any input is empty
+        if (!isValid) {
+            alert("Please enter and submit all the values.");
+        } else {
+       
+        document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</ul>" ;
+       document.getElementById('ty').innerHTML = "T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ "y<sub>3</sub>, " +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ "y<sub>3</sub>);  y = (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>) &isin; R<sup>3</sup>";
+      
+       
+       
+  
+    if(rank == rank2) {
+        
+       
+        document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} " +a+ " & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},&emsp;X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix},&emsp;B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        document.getElementById("note").innerHTML = `
+         <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+            <b>Consistency of matrix equation:</b>
+          <span style=" margin-left:1rem; background-color: yellow; ">
+            <b>Consistent</b>
+          </span></li></ul>
+          `;
+        document.getElementById("finalres").innerHTML = `<ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+          <span style='margin-right: 1rem; background-color:lightgreen;'>
+            <b>Consistency of chosen system of linear equations:</b>
+          </span>
+          <span style='background-color:yellow;'>
+            <b>Consistent</b>
+          </span></li></ul>`;
+
+        
+    }
+      else{
+       
+        document.getElementById("mat3").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+         document.getElementById("note").innerHTML = `
+          <span style="font-size: 28px; padding-left: 1rem; background-color: lightgreen;">
+            <b>&#10148; Consistency of matrix equation:</b>
+          </span>
+          <span style="font-size: 28px; margin-left: 1rem; color: black; background-color: yellow; ">
+            <b>Inonsistent</b>
+          </span>`;
+        document.getElementById("finalres").innerHTML = `
+          <span style='font-size:28px; padding-left: 1rem; margin-right: 2rem; background-color:lightgreen;'>
+            <b>&#10148; Consistency of chosen system of linear equations:</b>
+          </span>
+          <span style='font-size:28px; text-align:center; color: black; background-color:yellow;'>
+            <b>Inconsistent</b>
+          </span>`;
+    }
+      
+ 
+        ctx.beginPath();
+        ctx.arc(a*grid_size, -d*grid_size, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(b*grid_size, -e*grid_size, 3, 0, 2 * Math.PI);
+
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.beginPath();
+
+        ctx.arc(c*grid_size, -f*grid_size, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.beginPath();
+
+        ctx.arc(b1*grid_size, -b2*grid_size, 3, 0, 2 * Math.PI);
+        ctx.fillStyle = "black";
+        ctx.fill();
+
+       document.getElementById("my-canvas").style.display="block";
+       document.getElementById("pnote").innerHTML="<span style='color:blue; font-size: 1rem; '><b>Note:</b> Red points represent T(1, 0, 0), T(0, 1, 0) and T(0, 0, 1) and black point represents b</span>";
+       document.getElementById('ty2').innerHTML="<b>Consistency of the chosen system of linear equation: </b><br>"
+        
+  }
+ function checkAnswer() {
+      const ans = document.getElementById("q1").value;
+      const result = document.getElementById("result");
+
+      if (ans === "b") {
+        result.innerHTML = "&emsp;&emsp;✅ Correct!";
+        result.style.color = "green";
+      } else if (ans === "") {
+        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
+        result.style.color = "orange";
+      } else {
+        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is AX = B";
+        result.style.color = "red";
+      }
+    }
+
+    function checkAnswer2() {
+      const ans = document.getElementById("q2").value;
+      const result = document.getElementById("result2.1");
+
+      if (ans === "c") {
+        result.innerHTML = "&emsp;&emsp;✅ Correct!";
+        result.style.color = "green";
+      } else if (ans === "") {
+        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
+        result.style.color = "orange";
+      } else {
+        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is T(x) = b";
+        result.style.color = "red";
+      }
+    }
+
+    function reasonAns(){
+      document.getElementById("result2").style.display="";
+       document.getElementById("te1").style.display="";
+    }
+  </script>
+</html>
+
+
+
