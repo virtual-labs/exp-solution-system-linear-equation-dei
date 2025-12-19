@@ -1,11 +1,11 @@
 It is well known that various physical situations are modelled in terms of systems of linear equations. This experiment enables the user to appreciate the mathematics behind the consistency of such a system and to provide insight to the user to view the applications in the right perspective. Simple examples displaying standard methods for finding solutions have been discussed. However, this experiment is not focused on learning methods for finding solution(s) of a given system of linear equations.
 #### 1. System of linear equations:
 Let us consider a system of two linear equations in three variables given below:<br>
-ax<sub>1</sub>+bx<sub>2</sub>+cx<sub>3</sub>=r <br>
-dx<sub>1</sub>+fx<sub>2</sub>+gx<sub>3</sub>=s       … (i) <br>
-Note that in particular, if both r and s=0, then the system of linear equations (i) reduces to <br>
-ax<sub>1</sub>+bx<sub>2</sub>+cx<sub>3</sub>=0 <br>
-dx<sub>1</sub>+fx<sub>2</sub>+gx<sub>3</sub>=0       … (ii) <br>
+<i>ax</i><sub>1</sub>+<i>bx</i><sub>2</sub>+<i>cx</i><sub>3</sub>=<i>r</i> <br>
+<i>dx</i><sub>1</sub>+<i>fx</i><sub>2</sub>+<i>gx</i><sub>3</sub>=<i>s</i>       … (i) <br>
+Note that in particular, if both <i>r</i> and <i>s</i>=0, then the system of linear equations (i) reduces to <br>
+<i>ax</i><sub>1</sub>+<i>bx</i><sub>2</sub>+<i>cx</i><sub>3</sub>=0 <br>
+<i>dx</i><sub>1</sub>+<i>fx</i><sub>2</sub>+<i>gx</i><sub>3</sub>=0       … (ii) <br>
 This is called a homogenous system of two linear equations in three variables.
 It is well known that various physical situations are modelled in terms of systems of linear equations. <br>
 #### 2. Coefficient matrix and augmented matrix: 
