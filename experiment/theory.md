@@ -1,3 +1,4 @@
+It is well known that various physical situations are modelled in terms of systems of linear equations. This experiment enables the user to appreciate the mathematics behind the consistency of such a system and to provide insight to the user to view the applications in the right perspective. Simple examples displaying standard methods for finding solutions have been discussed. However, this experiment is not focused on learning methods for finding solution(s) of a given system of linear equations.
 #### 1. System of linear equations:
 Let us consider a system of two linear equations in three variables given below:<br>
 ax<sub>1</sub>+bx<sub>2</sub>+cx<sub>3</sub>=r <br>
