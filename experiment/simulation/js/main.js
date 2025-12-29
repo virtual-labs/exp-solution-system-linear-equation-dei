@@ -11,8 +11,8 @@ function submit() {
     let  e = parseInt(document.getElementById("e").value);
     let  f = parseInt(document.getElementById("f").value);
     let  b2 = parseInt(document.getElementById("b2").value);
-    let x1="x<sub>1</sub>";
-    let x2="x<sub>2</sub>";
+    let x1="<i>x</i><sub>1</sub>";
+    let x2="<i>x</i><sub>2</sub>";
          // Loop through each input field
     var isValid = true;
     var inputs = document.getElementsByClassName("eqn");
@@ -88,7 +88,7 @@ if (!formSubmitted) {
     if (!isValid) {
         alert("Please enter and submit all the values.");
     } else {
-      document.getElementById("eqns").innerHTML = "<center>"+a + "x<sub>1</sub> + "+ b +"x<sub>2</sub> + "+c+"x<sub>3</sub> = "+b1+"<br>"+d + "x<sub>1</sub> + "+ e +"x<sub>2</sub> + "+f+"x<sub>3</sub> = "+b2+"</center>";
+      document.getElementById("eqns").innerHTML = "<center>"+a + "<i>x</i><sub>1</sub> + "+ b +"<i>x</i><sub>2</sub> + "+c+"<i>x</i><sub>3</sub> = "+b1+"<br>"+d + "<i>x</i><sub>1</sub> + "+ e +"<i>x</i><sub>2</sub> + "+f+"<i>x</i><sub>3</sub> = "+b2+"</center>";
   
       
     }
@@ -322,10 +322,6 @@ function lmeqe() {
     let  f = parseInt(document.getElementById("f").value);
     let  b2 = parseInt(document.getElementById("b2").value);
 
-    // document.getElementById('te1').innerHTML = "T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1)  <br>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1)  <br>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)" ;
-    //  document.getElementById('ty').innerHTML = "T(y) = b <br> T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ " y<sub>3</sub> ) , (" +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ " y<sub>3</sub> ) ";
-    //document.getElementById("eqncons").innerHTML ="T(y) = b <br> b = ("+b1+", "+ b2+")"; 
-    // document.getElementById("eqncons").innerHTML="Rank A = Rank A<sup>+</sup>";
     const matrix = [
     [parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value), parseFloat(document.getElementById('c').value)],
     [parseFloat(document.getElementById('d').value), parseFloat(document.getElementById('e').value), parseFloat(document.getElementById('f').value)]
@@ -350,40 +346,17 @@ function lmeqe() {
     if (!isValid) {
         alert("Please enter and submit all the values.");
     } else {
-  document.getElementById('rankres').innerHTML = `<span style='padding-left: 3.8rem;'>Rank A = ${rank} </span> <br><span style='padding-left: 3.8rem;'>Rank A<sup>+</sup> = ${rank2}</span>`;
+  document.getElementById('rankres').innerHTML = `<span style='padding-left: 3.8rem;'>Rank <i>A</i> = ${rank} </span> <br><span style='padding-left: 3.8rem;'>Rank <i>A</i><sup>+</sup> = ${rank2}</span>`;
   
   
-  //document.getElementById('rankres2').innerHTML = `Rank A<sup>+</sup> = ${rank2}`;
+  //document.getElementById('rankres2').innerHTML = `Rank <i>A</i><sup>+</sup> = ${rank2}`;
   if(rank == rank2) {
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A = Rank A<sup>+</sup></span> <br><span style='margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'>&rArr; System of linear equations is <span style='background-color:yellow;'> consistent</span></span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank <i>A</i> = Rank <i>A</i><sup>+</sup></span> <br><span style='margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem; margin-top:1rem;'>&rArr; System of linear equations is <span style='background-color:yellow;'> consistent</span></span>";
     
   }
   else{
-    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank A &ne; Rank A<sup>+</sup></span><br><span style=' margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem;'>System of linear equations is  <span style='background-color:yellow;'>inconsistent</span> </span>";
+    document.getElementById("consres").innerHTML="<span style='padding-left: 2rem;'>&rArr; Rank <i>A</i> &ne; Rank <i>A</i><sup>+</sup></span><br><span style=' margin-left: 2rem; padding-left: 0.2rem; padding-right:0.2rem;'>System of linear equations is  <span style='background-color:yellow;'>inconsistent</span> </span>";
   }}
-    // document.getElementById("note").innerHTML="&#8658; b &isin; RangeT <br> Linear map equation (T(y)) is consistent";
-    // ctx.beginPath();
-    // ctx.arc(a*grid_size, -d*grid_size, 3, 0, 2 * Math.PI);
- 
-    // ctx.fillStyle = "red";
-    // ctx.fill();
-    // ctx.beginPath();
-    
-    // ctx.arc(b*grid_size, -e*grid_size, 3, 0, 2 * Math.PI);
-    // ctx.fillStyle = "red";
-    // ctx.fill();
-
-    // ctx.beginPath();
-    // ctx.arc(c*grid_size, -f*grid_size, 3, 0, 2 * Math.PI);
-    // ctx.fillStyle = "red";
-    // ctx.fill();
-
-    // ctx.beginPath();
-    // ctx.arc(b1*grid_size, -b2*grid_size, 3, 0, 2 * Math.PI);
-    // ctx.fillStyle = "black";
-    // ctx.fill();
-    // document.getElementById("illustration").style.display="block";
-    //document.getElementById("my-canvas").style.display="block";
    
 
 }

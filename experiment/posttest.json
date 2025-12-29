@@ -9,6 +9,12 @@
         "c": "$B=\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$",
         "d": "None of the above"
       },
+        "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Correct. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -20,6 +26,12 @@
         "c": "$B=\\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}$",
         "d": "None of the above"
       },
+        "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -31,6 +43,12 @@
         "c": "B=0 0",
         "d": "None of the above"
       },
+       "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -42,6 +60,12 @@
         "c": "X = (0, 0, 0)",
         "d": "None of the above"
       },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Correct. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -53,6 +77,12 @@
         "c": "Exactly two solutions",
         "d": "Finite but more than two solutions"
       },
+       "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
@@ -64,6 +94,12 @@
         "c": "System is consistent and has infinitely many solutions ",
         "d": "System is inconsistent"
       },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Correct. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -75,6 +111,12 @@
         "c": "System is consistent and has infinitely many solutions ",
         "d": "System is inconsistent"
       },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Correct. Follows by definition."
+            },
       "correctAnswer": "d",
       "difficulty": "beginner"
     }
