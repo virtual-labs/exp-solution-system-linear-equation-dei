@@ -11,39 +11,11 @@ It is well known that various physical situations are modelled in terms of syste
 #### 2. Coefficient matrix and augmented matrix: 
 The matrix <i>A</i> = $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ and <i>B</i> = $ \begin{pmatrix} r \\\ s \end {pmatrix} $ are obtained from the coefficients of the equations given in the above section. The matrix <i>A</i> is called coefficient matrix and the matrix [<i>A</i>|<i>B</i>] is known as augmented matrix and is denoted by <i>A</i><sup>+</sup>. <br>
 #### 3. Related matrix equation:
-Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where <i>A</i> =  $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ , $ X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix} $ and $ B = \begin{pmatrix} r \\\ s \end {pmatrix} $
+Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ , $ X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix} $ and $ B = \begin{pmatrix} r \\\ s \end {pmatrix} $
 
 Its solution provides a solution of the system of linear equations and vice-versa. It may be noted that system of linear equations is consistent if and only if related matrix equation is consistent.
 #### 4. Example:
-Consider 2<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>+4<i>x</i><sub>3</sub>=1 and <i>x</i><sub>1</sub>-2<i>x</i><sub>2</sub>+3<i>x</i><sub>3</sub>=2 be a system of two linear equations in three variables. Then the coefficient matrix 
-
-$$
-\begin{aligned}
-&\hspace{-9.2cm} A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} 
-\end{aligned}
-$$
-
-and the given system of linear equations can be written as <i>AX</i>=<i>B</i>, where 
-
-$$
-\begin{aligned}
-&\hspace{-9.2cm} X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix}  \text{ and } B = \begin{pmatrix} 1 \\\ 2 \end {pmatrix}
-\end{aligned}
-$$
-
-Clearly
-
-$$
-\begin{aligned}
-A^+ = \begin{pmatrix} 
-2 & 3 & 4 \vert & 1 \\
-1 & -2 & 3 \vert & 2
-\end{pmatrix} 
-\end{aligned}
-$$
-
-
-is the augmented matrix. 
+Consider 2<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>+4<i>x</i><sub>3</sub>=1 and <i>x</i><sub>1</sub>-2<i>x</i><sub>2</sub>+3<i>x</i><sub>3</sub>=2 be a system of two linear equations in three variables. Then the coefficient matrix $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ and the given system of linear equations can be written as <i>AX</i>=<i>B</i>, where $ X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix} $ and $ B = \begin{pmatrix} 1 \\\ 2 \end {pmatrix} $ Clearly $ A^+ = \begin{pmatrix} 2 & 3 & 4 \vert & 1 \\ 1 & -2 & 3 \vert & 2 \end{pmatrix} $ is the augmented matrix. 
 #### 5. Related linear map equation and its equivalence:
 We discuss below the linear map equation associated with a matrix equation.
 ##### 5.1. Related linear map and its range: 
@@ -69,138 +41,26 @@ Let <i>A</i> be a square matrix and let the matrix equation <i>AX</i>=<i>B</i> b
 
 <b>Proof:</b> Recall from Experiment 7 that <i>T</i>(<i>x</i>)=<i>b</i> has a unique solution, where <i>T</i>(<i>x</i>)=<i>b</i> is the linear map equation associated to the matrix equation, has a unique solution (if it exists) if and only if <i>T</i> is one-to-one. Thus a consistent system of linear equations represented by <i>AX</i>=<i>B</i> has a unique solution if and only if <i>A</i> is invertible since <i>A</i> is a square matrix.
 ##### 6.3. Examples:
-(i.) Consider the matrix equation <i>AX</i>=<i>B</i>, where 
-
-$$
-\begin{aligned}
-&\hspace{-9.2cm} A = \begin{pmatrix} 1 & 2 \\\ 2 & 6\end{pmatrix} \text{ and } B = \begin{pmatrix} 3 \\\ 1 \end {pmatrix}
-\end{aligned}
-$$
-
+(i.) Consider the matrix equation <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} 1 & 2 \\\ 2 & 6\end{pmatrix} $ and $ B = \begin{pmatrix} 3 \\\ 1 \end{pmatrix} $
 <b>Consistency & uniqueness:</b>
-Clearly 
-
-$$
-\begin{aligned}
-A^+ = \begin{pmatrix} 
-1 & 2 & \vert & 4 \\
-2 & 6 & \vert & 2
-\end{pmatrix} 
-\end{aligned}
-$$
-
-
+Clearly $ \begin{aligned} A^+ = \begin{pmatrix} 1 & 2 & \vert & 4 \\ 2 & 6 & \vert & 2 \end{pmatrix} $
 The rank of <i>A</i> is 2 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists that is, the given matrix equation is consistent. As <i>A</i> is a square matrix and is invertible, by Section 6.2. (i), solution is unique. <br>
-(ii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where 
-
-$$
-\begin{aligned}
-A = \begin{pmatrix} 
-1 & 1 & -1 \\
-0 & 0 & 0
-\end{pmatrix} 
-\text{ and } 
-B = \begin{pmatrix} 
-2 \\ 
-4 
-\end{pmatrix}.
-\end{aligned}
-$$
-
+(ii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where $ \begin{aligned} A = \begin{pmatrix} 1 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} $ and $ B = \begin{pmatrix} 2 \\ 4 \end{pmatrix}. $
 <b>Consistency:</b>
-Clearly 
-
-$$
-\begin{aligned}
-A^+ = \begin{pmatrix} 
-1 & 1 & -1 \vert & 2 \\
-0 & 0 & 0 \vert & 4
-\end{pmatrix} 
-\end{aligned}
-$$
-
+Clearly $ A^+ = \begin{pmatrix} 1 & 1 & -1 \vert & 2 \\ 0 & 0 & 0 \vert & 4 \end{pmatrix} $
 The rank of <i>A</i> is 1 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>≠Rank<i>A</i><sup>+</sup>. Thus the given matrix equation is inconsistent. <br>
-(iii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where
-
-$$
-\begin{aligned}
-A = \begin{pmatrix} 
-1 & 1 \\
-1 & -1 \\
-1 & 2
-\end{pmatrix} 
-\text{ and } 
-B = \begin{pmatrix} 
-2 \\ 
-0 \\
-3
-\end{pmatrix}.
-\end{aligned}
-$$
+(iii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 2 \end{pmatrix} $ and $ B = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix}. $
 
 <b>Consistency & uniqueness:</b>
-Clearly
-
-$$
-\begin{aligned}
-A^+ = \begin{pmatrix} 
-1 & 1  \vert & 2  \\
-1 & -1 \vert & 0 \\
-1 & 2  \vert & 3
-\end{pmatrix} 
-\end{aligned}
-$$
-
+Clearly $ A^+ = \begin{pmatrix} 1 & 1  \vert & 2  \\ 1 & -1 \vert & 0 \\ 1 & 2  \vert & 3 \end{pmatrix} $
 The rank of <i>A</i> is 2 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As (1, 1) is the only solution which satisfy the above matrix equation, solution is not unique. <br>
-(iv.) Consider the matrix equation <i>AX</i>=<i>B</i>, where
-
-$$
-\begin{aligned}
-A = \begin{pmatrix} 
-1 & 1 \\
-2 & 2 \\
-3 & 3
-\end{pmatrix} 
-\text{ and } 
-B = \begin{pmatrix} 
-2 \\ 
-4 \\
-6
-\end{pmatrix}.
-\end{aligned}
-$$
+(iv.) Consider the matrix equation <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} $ and $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix}. $
 
 <b>Consistency & uniqueness:</b>
-Clearly 
-
-$$
-\begin{aligned}
-A^+ = \begin{pmatrix} 
-1 & 1  \vert & 2  \\
-2 & 2 \vert & 4 \\
-3 & 3  \vert & 6
-\end{pmatrix} 
-\end{aligned}
-$$
-
+Clearly $ A^+ = \begin{pmatrix} 1 & 1  \vert & 2  \\ 2 & 2 \vert & 4 \\ 3 & 3  \vert & 6 \end{pmatrix} $
 The rank of <i>A</i> is 1 and the rank of <i>A</i><sup>+</sup> is also 1. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As (2, 0) and (0, 2) both satisfy the above matrix equation, solution is not unique. 
 ##### 6.4. Understanding the condition for consistency and uniqueness of matrix equation (through an example):
-Example: Consider the matrix equation <i>AX</i>=<i>B</i>, where 
-
-$$
-\begin{aligned}
-A = \begin{pmatrix} 
-1 & -1 & 0 \\
-0 & 1 & 1
-\end{pmatrix} 
-\text{ and } 
-B = \begin{pmatrix} 
-4 \\
-6
-\end{pmatrix}.
-\end{aligned}
-$$
-
+Example: Consider the matrix equation <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} 1 & -1 & 0 \\ 0 & 1 & 1 \end{pmatrix} $ and $ B = \begin{pmatrix} 4 \\ 6 \end{pmatrix}. $
 <b>Linear map:</b>
 We first find the linear transformation associated with <i>A</i> w.r.t. the standard basis <i>B</i><sub>1</sub>={<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, <i>e</i><sub>3</sub>} and <i>B</i><sub>2</sub>={<i>f</i><sub>1</sub>, <i>f</i><sub>1</sub>} of <i>R</i><sup>3</sup> and <i>R</i><sup>2</sup> respectively. Here <i>e</i><sub>1</sub>=(1, 0, 0), <i>e</i><sub>2</sub>=(0, 1, 0), <i>e</i><sub>3</sub>=(0, 0,1), <i>f</i><sub>1</sub>=(1, 0) and <i>f</i><sub>2</sub>=(0, 1). Define <i>T</i>(1, 0, 0)=1(1, 0)+0(0, 1)=(1, 0), <i>T</i>(0, 1, 0)=-1(1, 0)+1(0, 1)=(-1, 1) and <i>T</i>(0, 0, 1)=0(1, 0)+1(0, 1)=(0, 1). If (<i>x</i>, <i>y</i>, <i>z</i>)=<i>a</i>(1, 0, 0)+<i>b</i>(0, 1, 0)+<i>c</i>(0, 0, 1); then <i>a</i>=<i>x</i>, <i>b</i>=<i>y</i> and <i>c</i>=<i>z</i>. Thus define <i>T</i>:<i>R</i><sup>3</sup>→<i>R</i><sup>2</sup> by <i>T</i>(<i>x</i>, <i>y</i>, <i>z</i>)=<i>aT</i>(1, 0, 0)+<i>bT</i>(0, 1, 0)+<i>cT</i>(0, 0, 1)=<i>a</i>(1, 0)+<i>b</i>(-1, 1)+<i>c</i>(0, 1)=(<i>a</i>-<i>b</i>, <i>b</i>+<i>c</i>)=(<i>x</i>-<i>y</i>, <i>y</i>+<i>z</i>), where <i>x, y, z</i>&isin;<i>R</i>. Thus the linear transformation <i>T</i>:<i>R</i><sup>3</sup>→<i>R</i><sup>2</sup> associated with the matrix <i>A</i> w.r.t. the basis <i>B</i><sub>1</sub> and <i>B</i><sub>2</sub> is <i>T</i>(<i>x</i>, <i>y</i>, <i>z</i>)=(<i>x</i>-<i>y</i>, <i>y</i>+<i>z</i>), where <i>x, y, z</i>&isin;<i>R</i>. <br>
 
@@ -222,18 +82,7 @@ iii. Let <i>A</i> be a matrix of order 3×2 and the matrix equation <i>AX</i>=<i
 #### 7. Consistency (existence of solution) of a system of linear equations:
 ##### 7.1. Consistency:
 Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>. <br>
-In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where 
-
-$$
-\begin{aligned}
-0 = \begin{pmatrix} 
-0 \\ 0 \\ 0 
-\end{pmatrix} 
-\end{aligned}
-$$
-
-
-is consistent. In this case, clearly since <i>A</i>=<i>A</i><sup>+</sup>, a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.
+In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ is consistent. In this case, clearly since <i>A</i>=<i>A</i><sup>+</sup>, a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.
 ##### 7.2. Uniqueness:
 Let solution of a system of two linear equations in three variables as given in equation (i) exists. Then it has a unique solution if and only if matrix equation <i>AX</i>=<i>B</i> has a unique solution.
 ##### 7.3. Example:
