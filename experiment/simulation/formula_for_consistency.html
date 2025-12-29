@@ -3,152 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="css/">
    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  <script src="../simulation/js/ffc_main2.js"></script>
+  <script src="../simulation/js/mainjs3.js"></script>
   <link rel="stylesheet" href="../simulation/css/ffc_style2.css">
 
 </head>
-<style>
-    body{
-        width: 100%;
-        height: 100vh;
-        /*display: flex;*/
-        justify-content: center;
-        align-items: center;
-        /*background: linear-gradient(45deg, #0a0a0a, #3a4452);*/
-        background-color: lightyellow;
-        font-size: 1.5rem;
-    }
-    .pagehead{
-      display: block;
-      text-align: center;
-      border-top: 2px solid lightseagreen;
-      background: linear-gradient(yellow, lightseagreen);
-      padding: 0.2rem 0.2rem 0.2rem 0.2rem;
-      float:center;
-      margin: 0.5rem;
-      font-size: 35px;
-    }
-    .eqn{
-        width: 3rem;
-    }
-    #mat3{
-      font-size: 20px;
-      
-    }
-    .container{
-        /*border: 1px solid #717377;*/
-        padding: 1rem;
-        border-radius: 1.2rem;
-        background-color: whitesmoke;
-        margin-left: 15%;
-        margin-right: 15%;
-        /*background: transparent;
-        background: linear-gradient(45deg, #0a0a0a, #3a4452);*/
-        box-shadow: 0px 3px 15px rgba(133, 115, 119, 0.5);
-    }
-    .container:hover{
-        border-radius: 0.5rem;
-        box-shadow: 0px 3px 15px rgba(133, 115, 119, 1.0);
-    }
-    .subbtn{
-        height:auto;
-        width:auto;
-        background-color:#81cdc6;
-        font-size: 1.5rem;
-        border: 1px solid teal;
-        margin: 0.5rem 0.2rem 0.2rem 0.2rem;
-    }
-    .subbtn:hover{
-        background: linear-gradient(90deg, #81cdc6);
-        color: white;
-        box-shadow: 0px 3px 15px rgba(10, 11, 19, 0.5);
-    }
-    .subbtn2{
-       background-color: none;
-    }
-    input{
-        font-size: 20px;
-    }
-    .inp{
-      font-size: 15px;
-    }
-    .secont {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 63px;
-  
-  }
-  #te1{
-    margin: 0;
-    padding-top: 10px;
-  }
-  #ty{
-    margin-top: 9px;
-  }
 
-  .section {
-    flex-basis: calc(50% - 20px);
-   
-    box-sizing: border-box;
-  }
-
-  @media (max-width: 768px) {
-    .section {
-      flex-basis: 100%;
-      width: 100%;
-    }
-  }
-  ul{
-    margin: 0;
-  }
-  .previous{
-    display: block;
-    float:left;
-    background-color: #04AA6D;
-    color: white;
-    font-size: 18px;
-    margin-top: 0.5rem;
-    align-content: center;
-    text-align: center;
-    padding: 8px 16px;
-    text-decoration: none;
-    width:8rem;
-}
-.previous:hover {
-  background-color: #ada;
-  color: black;
-}
-.note{
-  color: blue;
-  font-size: 1rem;
-  margin-left: 10px;
-}  
- #mat3{
-  background-color: yellow;
- }
-</style>
 <body>
    <h2 class="pagehead">Illustration to understand the formula for consistency</h2>
 <div class="container">
    
       <!-- <button class="subbtn" id="illustration" style="background-color:rgb(115, 233, 113); font-weight: 700; font-size: 30px; font-family: 'Times New Roman', Times, serif;" onclick="illustration()">Illustration to understand the formula for consistency</button> -->
-         <p class="note">(Note: The values shown on this page are based on the selections you made on the previous page. If you change the values on the first page, the values on this page will also change. The dynamically changing values are highlighted with a yellow background.)</p>
+         <p class="note">Note: The values shown on this page are based on the selections you made on the previous page. If you change the values on the first page, the values on this page will also change. The dynamically changing values are highlighted with a yellow background.</p>
 
-       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Recall:</b></li></ul>
+       <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Recall:</b></li></ul>
       <p id="mat3"></p>
    
-      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear transformation T (associated with A w.r.t standard basis):</b></li></ul>
-      <p>&emsp;&emsp; T:R<sup>3</sup> &rarr; R<sup>2</sup> is defined by</p>
+      <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear transformation <i>T</i> (associated with <i>A</i> w.r.t. standard basis):</b></li></ul>
+      <p>&emsp;&emsp; <i>T:R</i><sup>3</sup> &rarr; <i>R</i><sup>2</sup> is defined by</p>
       <p id="ty" style='padding-left: 3.3rem; background-color: yellow;'></p>
       
-       <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Matrix equation (Equivalent to the system of linear equations):</b>
+       <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Matrix equation (Equivalent to the system of linear equations):</b>
       <select id="q1" style="font-size: 15px;">
       <option value="">--Select an option--</option>
-      <option value="a">X = B</option>
-      <option value="b">AX = B</option>
-      <option value="c">BX = A</option>
+      <option value="a">𝑿 = 𝑩</option>
+      <option value="b">𝑨𝑿 = 𝑩</option>
+      <option value="c">𝑩𝑿 = 𝑨</option>
       <!-- <option value="notinjective">T is Onto</option> -->
     </select>
     <button class="subbtn1" onclick="checkAnswer()">Submit</button>
@@ -157,38 +37,37 @@
       
         <!-- <br><p style='padding-left: 5rem; margin-left:30%; padding:0;'>AX = B</p> -->
      
-      <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear map equation (Equivalent to the system of linear equations):</b> <select id="q2" style="font-size: 15px;">
+      <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b> Linear map equation (Equivalent to the system of linear equations):</b> <select id="q2" style="font-size: 15px;">
       <option value="">--Select an option--</option>
-      <option value="a">T = b</option>
-      <option value="b">b(x) = T</option>
-      <option value="c">T(x) = b</option>
+      <option value="a">𝑻 = 𝒃</option>
+      <option value="b">𝒃(𝒙) = 𝑻</option>
+      <option value="c">𝑻(𝒙) = 𝒃</option>
     </select>
   <button class="subbtn1" onclick="checkAnswer2()">Submit</button>
-    <p id="result2.1" style="font-size: 24px;"></p>
+    <p id="result2_1" style="font-size: 24px;"></p>
   </li></ul>
       
     
       </p>
-      <button class="subbtn1" style="margin-left: 4rem;" onclick="reasonAns()">Reason</button>
-      <p id="result2" style="margin: 0; display:none;"></p>
+      <button class="subbtn1" id="reasonbtn" style="margin-left: 4rem; display: none;" onclick="reasonAns()">Reason</button>
       <p id="te1" style="margin: 0; display: none;"></p>
       
-      <p id="ty1">  <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Consistency of linear map equation:</b></li></ul>
+      <p id="ty1">  <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Consistency of linear map equation:</b></li></ul>
         
         <ul style='padding-left: 4rem; padding-top:14px; font-size:23px;'>
         <li>
-              <input class="inp" id="btn11" type="submit" onclick="bRange('btn11');" value="b ∈ RangeT">
+              <input class="inp" id="btn11" type="submit" onclick="checkRC('bRange')" value="𝒃 ∈ Range 𝑻">
                     /
-              <input class="inp" id="btn12" type="submit" onclick="bnRange('btn12');" value="b &#x2209; Range T"><span id='consiss'></span>
+              <input class="inp" id="btn12" type="submit" onclick="checkRC('bnRange')" value="𝒃 &#x2209; Range 𝑻"><span id='consiss'></span>
 
               
         </li>
                     
                     
         <li style='margin-bottom:5px;'>
-              <input class="inp" id="btn13" type="submit" onclick="consis('btn13');" value="Consistent">
+              <input class="inp" id="btn13" type="submit" onclick="checkRC('consis');" value="Consistent">
                     /
-              <input class="inp" id="btn14" type="submit" onclick="inconsis('btn14');" value="Not consistent"><span id='consiss2'></span>
+              <input class="inp" id="btn14" type="submit" onclick="checkRC('inconsis');" value="Not consistent"><span id='consiss2'></span>
 
               <p id="ans2"></p>
         
@@ -201,175 +80,37 @@
       
       <div class="secont">
         <div class="section">
-          <canvas id="my-canvas" margin-left:2rem;" width="250" height="250"></canvas>
+          <canvas id="my-canvas" style="margin-left:2rem;" width="250" height="250"></canvas>
         </div>
         <div class="section">
           
           <p id="pnote"></p>
         </div>
       </div>
-            
-
-          
-       
-      
+                  
       <p id="note"></p>
       
       <p id="finalres"></p>
-      <p id="note3"><ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Summary:</b></li></ul>
+      <p id="note3"><ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li><b>Summary:</b></li></ul>
         <p style='margin-left: 3rem;'>Conditions for consistency:</p>
         <ul style='padding-left:8rem;'>
-          <li>AX = B is consistent &hArr; Rank A = Rank A &#8314; </li>
-          <li>T(x) = b is consistent &hArr; b &isin; Range T </li>
-          <li>Rank A = Rank A &#8314; &hArr; b &isin; Range T</li></ul>
+          <li><i>AX</i> = <i>B</i> is consistent &hArr; Rank <i>A</i> = Rank <i>A</i> &#8314; </li>
+          <li><i>T</i>(<i>x</i>) = <i>b</i> is consistent &hArr; <i>b</i> &isin; Range <i>T</i> </li>
+          <li>Rank <i>A</i> = Rank <i>A</i> &#8314; &hArr; <i>b</i> &isin; Range <i>T</i></li></ul>
 
           <p style='margin-left: 3rem;'>Following are equivalent:</p>
           <ul style='padding-left:8rem;'>
           <li>System of linear equations is consistent</li>
-            <li>AX = B is consistent </li>
-            <li>T(x) = b is consistent</li></ul>
+            <li><i>AX</i> = <i>B</i> is consistent </li>
+            <li><i>T</i>(<i>x</i>) = <i>b</i> is consistent</li></ul>
           </p>
       </div>
-      
-
-      
-
     
 </div>
 <a href="./" class="previous">&laquo; Previous Page</a>
 </body>
 
 <script>
-function bRange(){
-    const a = localStorage.getItem("a");
-        const b = localStorage.getItem("b");
-        const c = localStorage.getItem("c");
-        const d = localStorage.getItem("d");
-        const e = localStorage.getItem("e");
-        const f = localStorage.getItem("f");
-        const b1 = localStorage.getItem("b1");
-        const b2 = localStorage.getItem("b2");
-        const matrix = localStorage.getItem("matrix");
-        const matrix2 = localStorage.getItem("matrix2");
-        const rank = localStorage.getItem("rank");
-        const rank2 = localStorage.getItem("rank2");
-      
-    if(rank == rank2) {
-        document.getElementById("consiss").innerHTML="&emsp; Correct. <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
-        document.getElementById("btn11").style.backgroundColor="lightgreen";
-        document.getElementById("btn12").style.backgroundColor="";
-       
-       
-    }
-      else{
-        document.getElementById("consiss").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
-        document.getElementById("btn11").style.backgroundColor="red";
-         document.getElementById("btn12").style.backgroundColor="";
-       
-    }
-
-
-}
-
-
-function bnRange(){
-    const a = localStorage.getItem("a");
-        const b = localStorage.getItem("b");
-        const c = localStorage.getItem("c");
-        const d = localStorage.getItem("d");
-        const e = localStorage.getItem("e");
-        const f = localStorage.getItem("f");
-        const b1 = localStorage.getItem("b1");
-        const b2 = localStorage.getItem("b2");
-        const matrix = localStorage.getItem("matrix");
-        const matrix2 = localStorage.getItem("matrix2");
-        const rank = localStorage.getItem("rank");
-        const rank2 = localStorage.getItem("rank2");
-      
-    if(rank == rank2) {
-        document.getElementById("consiss").innerHTML="&emsp; Incorrect! <span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &isin; RangeT</span>";
-        document.getElementById("btn12").style.backgroundColor="red";
-        document.getElementById("btn11").style.backgroundColor="";
-       
-    }
-      else{
-        document.getElementById("consiss").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'> b &notin; RangeT</span>";
-        document.getElementById("btn12").style.backgroundColor="lightgreen";
-        document.getElementById("btn11").style.backgroundColor="";
-       
-       
-       
-    }}
-
-
-    function consis(){
-    const a = localStorage.getItem("a");
-        const b = localStorage.getItem("b");
-        const c = localStorage.getItem("c");
-        const d = localStorage.getItem("d");
-        const e = localStorage.getItem("e");
-        const f = localStorage.getItem("f");
-        const b1 = localStorage.getItem("b1");
-        const b2 = localStorage.getItem("b2");
-        const matrix = localStorage.getItem("matrix");
-        const matrix2 = localStorage.getItem("matrix2");
-        const rank = localStorage.getItem("rank");
-        const rank2 = localStorage.getItem("rank2");
-      
-    if(rank == rank2) {
-       
-        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
-        document.getElementById("btn13").style.backgroundColor="lightgreen";
-        document.getElementById("btn14").style.backgroundColor="";
-    }
-      else{
-        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
-        document.getElementById("btn13").style.backgroundColor="red";
-        document.getElementById("btn14").style.backgroundColor="";
-       
-    }
-
-
-}
-
-
-
-    function inconsis(){
-    const a = localStorage.getItem("a");
-        const b = localStorage.getItem("b");
-        const c = localStorage.getItem("c");
-        const d = localStorage.getItem("d");
-        const e = localStorage.getItem("e");
-        const f = localStorage.getItem("f");
-        const b1 = localStorage.getItem("b1");
-        const b2 = localStorage.getItem("b2");
-        const matrix = localStorage.getItem("matrix");
-        const matrix2 = localStorage.getItem("matrix2");
-        const rank = localStorage.getItem("rank");
-        const rank2 = localStorage.getItem("rank2");
-      
-    if(rank == rank2) {
-       
-        document.getElementById("consiss2").innerHTML="&emsp; Incorrect!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Consistent</span>";
-        document.getElementById("btn14").style.backgroundColor="red";
-        document.getElementById("btn13").style.backgroundColor="";
-    }
-      else{
-        document.getElementById("consiss2").innerHTML="&emsp; Correct!<span style=' background-color:yellow; padding: 0rem 0.2rem;'>Inconsistent</span>";
-        document.getElementById("btn14").style.backgroundColor="lightgreen";
-        document.getElementById("btn13").style.backgroundColor="";
-       
-    }}
-//  function bRange(){
-//        document.getElementById('ans1').innerHTML='CORRECT!';
-//        document.getElementById('ans1.1').innerHTML='';
-       
-        
-//    }
-//    function bnRange(){
-//        document.getElementById('ans1.1').innerHTML='INCORRECT!';
-//        document.getElementById('ans1').innerHTML='';}
-       
 
 var grid_size = 12;
 var x_axis_distance_grid_lines = 10;
@@ -501,21 +242,11 @@ for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
     ctx.font = '9px Arial';
     ctx.textAlign = 'start';
     ctx.fillText(y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, -grid_size*i+3);
-    // ctx.beginPath();
-    // ctx.arc(2*grid_size, -4*grid_size, 3, 0, 2 * Math.PI);
-    // ctx.fill();
-// ctx.moveTo(-10*grid_size, 20*grid_size);
-// ctx.lineTo(5*grid_size, -10*grid_size);
-
-// Draw the Path
+  
 ctx.stroke();
     
 }
  
-    
-
-
-      
         const a = localStorage.getItem("a");
         const b = localStorage.getItem("b");
         const c = localStorage.getItem("c");
@@ -543,24 +274,21 @@ ctx.stroke();
         } else {
        
         document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</ul>" ;
-       document.getElementById('ty').innerHTML = "T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ "y<sub>3</sub>, " +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ "y<sub>3</sub>);  y = (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>) &isin; R<sup>3</sup>";
+       document.getElementById('ty').innerHTML = "<i>T</i>(<i>y</i>) = (" +a+ "<i>y</i><sub>1</sub> + " +b+  "<i>y</i><sub>2</sub> + "+c+ "<i>y</i><sub>3</sub>, " +d+ "<i>y</i><sub>1</sub> + " +e+  "<i>y</i><sub>2</sub> + "+f+ "<i>y</i><sub>3</sub>);  y = (<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, <i>y</i><sub>3</sub>) &isin; <i>R</i><sup>3</sup>";
       
-       
-       
-  
     if(rank == rank2) {
         
        
         document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} " +a+ " & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},&emsp;X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix},&emsp;B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
         MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         document.getElementById("note").innerHTML = `
-         <ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+         <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
             <b>Consistency of matrix equation:</b>
           <span style=" margin-left:1rem; background-color: yellow; ">
             <b>Consistent</b>
           </span></li></ul>
           `;
-        document.getElementById("finalres").innerHTML = `<ul id="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
+        document.getElementById("finalres").innerHTML = `<ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
           <span style='margin-right: 1rem; background-color:lightgreen;'>
             <b>Consistency of chosen system of linear equations:</b>
           </span>
@@ -579,7 +307,7 @@ ctx.stroke();
             <b>&#10148; Consistency of matrix equation:</b>
           </span>
           <span style="font-size: 28px; margin-left: 1rem; color: black; background-color: yellow; ">
-            <b>Inonsistent</b>
+            <b>Inconsistent</b>
           </span>`;
         document.getElementById("finalres").innerHTML = `
           <span style='font-size:28px; padding-left: 1rem; margin-right: 2rem; background-color:lightgreen;'>
@@ -613,46 +341,10 @@ ctx.stroke();
         ctx.fill();
 
        document.getElementById("my-canvas").style.display="block";
-       document.getElementById("pnote").innerHTML="<span style='color:blue; font-size: 1rem; '><b>Note:</b> Red points represent T(1, 0, 0), T(0, 1, 0) and T(0, 0, 1) and black point represents b</span>";
-       document.getElementById('ty2').innerHTML="<b>Consistency of the chosen system of linear equation: </b><br>"
+       document.getElementById("pnote").innerHTML="<span style='color:blue; font-size: 1rem; '><b>Note:</b> Red points represent <i>T</i>(1, 0, 0), <i>T</i>(0, 1, 0) and <i>T</i>(0, 0, 1) and black point represents b</span>";
+       
         
   }
- function checkAnswer() {
-      const ans = document.getElementById("q1").value;
-      const result = document.getElementById("result");
-
-      if (ans === "b") {
-        result.innerHTML = "&emsp;&emsp;✅ Correct!";
-        result.style.color = "green";
-      } else if (ans === "") {
-        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
-        result.style.color = "orange";
-      } else {
-        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is AX = B";
-        result.style.color = "red";
-      }
-    }
-
-    function checkAnswer2() {
-      const ans = document.getElementById("q2").value;
-      const result = document.getElementById("result2.1");
-
-      if (ans === "c") {
-        result.innerHTML = "&emsp;&emsp;✅ Correct!";
-        result.style.color = "green";
-      } else if (ans === "") {
-        result.innerHTML = "&emsp;&emsp;⚠️ Please select an option.";
-        result.style.color = "orange";
-      } else {
-        result.innerHTML = "&emsp;&emsp;❌ Incorrect. Correct answer is T(x) = b";
-        result.style.color = "red";
-      }
-    }
-
-    function reasonAns(){
-      document.getElementById("result2").style.display="";
-       document.getElementById("te1").style.display="";
-    }
   </script>
 </html>
 
