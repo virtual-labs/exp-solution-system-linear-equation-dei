@@ -1,1 +1,1 @@
-The aim of this experiment is to demonstrate the mathematics behind consistency of systems of linear equations. This experiment is not focused on learning methods for finding solution(s) of a given system of linear equations. However, examples of common use displaying standard methods for finding solutions have been discussed.
+The aim of this experiment is to demonstrate the mathematics behind consistency of systems of linear equations. Examples have been given to supplement the theory.
