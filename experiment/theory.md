@@ -9,21 +9,9 @@ Note that in particular, if both <i>r</i> and <i>s</i>=0, then the system of lin
 This is called a homogenous system of two linear equations in three variables.
 It is well known that various physical situations are modelled in terms of systems of linear equations. <br>
 #### 2. Coefficient matrix and augmented matrix: 
-$$
-\begin{aligned}
-&\hspace{-9.2cm} \text{The matrix } <i>A</i> = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} \text{ and } <i>B</i> = \begin{pmatrix} r \\\ s \end {pmatrix}
-\end{aligned}
-$$
-
-are obtained from the coefficients of the equations given in the above section. The matrix <i>A</i> is called coefficient matrix and the matrix [<i>A</i>|<i>B</i>] is known as augmented matrix and is denoted by <i>A</i><sup>+</sup>. <br>
+The matrix <i>A</i> = $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ and <i>B</i> = $ \begin{pmatrix} r \\\ s \end {pmatrix} $ are obtained from the coefficients of the equations given in the above section. The matrix <i>A</i> is called coefficient matrix and the matrix [<i>A</i>|<i>B</i>] is known as augmented matrix and is denoted by <i>A</i><sup>+</sup>. <br>
 #### 3. Related matrix equation:
-Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where 
-
-$$
-\begin{aligned}
-&\hspace{-9.2cm} A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} \text{ , } X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix}  \text{ and } B = \begin{pmatrix} r \\\ s \end {pmatrix}
-\end{aligned}
-$$
+Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where <i>A</i> =  $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ , $ X = \begin{pmatrix} x1 \\\ x2 \\\ x3 \end {pmatrix} $ and $ B = \begin{pmatrix} r \\\ s \end {pmatrix} $
 
 Its solution provides a solution of the system of linear equations and vice-versa. It may be noted that system of linear equations is consistent if and only if related matrix equation is consistent.
 #### 4. Example:
