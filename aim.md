@@ -1,0 +1,1 @@
+The aim of this experiment is to demonstrate the mathematics behind consistency of systems of linear equations. Examples have been given to supplement the theory.

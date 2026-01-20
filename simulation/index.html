@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="css/">
+     <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script src="../simulation/js/main.js"></script>
+  <link rel="stylesheet" href="../simulation/css/main.css">
+
+</head>
+<body>
+    <h2 class="pagehead">Consistency of system of linear equations</h2>
+<div class="container">
+  <h3>Example:</h3>
+    <p>Enter the co-efficients  to choose a system of two linear equations in three unknowns</p>
+    <table>
+        <tr>
+          <td><input class="eqn" type="number" id="a"><label for="a"><i>x</i><sub>1</sub> + </label></td>
+          <td><input class="eqn" type="number" id="b"><label for="a"><i>x</i><sub>2</sub> + </label></td>
+          <td><input class="eqn" type="number" id="c"><label for="a"><i>x</i><sub>3</sub> =</label></td>
+          <td><input class="eqn" type="number" id="b1"></td>
+        </tr>
+        <tr>
+          <td><input class="eqn" type="number" id="d"><label for="a"><i>x</i><sub>1</sub> + </label></td>
+          <td><input class="eqn" type="number" id="e"><label for="a"><i>x</i><sub>2</sub> + </label></td>
+          <td><input class="eqn" type="number" id="f"><label for="a"><i>x</i><sub>3</sub> = </label></td>
+          <td><input class="eqn" type="number" id="b2"></td>
+        </tr>
+      </table>
+      <button class="subbtn" id="subbtn" onclick="submit()">Submit</button>
+      <p id="submisionmsg"></p>
+      <button class="subbtn" id="sbtn" style="display:block;" onclick="smatrix()">System of linear equations under consideration</button>
+      <p id="eqns"></p>
+      
+      <button class="subbtn" id="illustration"  onclick="illustration()">Related matrices</button>
+      <!-- <p id="result"></p> -->
+      <p id="mat3" class="mat3"></p>
+      <!-- <p id="mat"></p> -->
+   
+      <button class="subbtn" id="lmeqe" style="display:block;" onclick="lmeqe()">Consistency of chosen system of linear equations</button>
+      <p id="eqncons"></p>
+      <p id="rankres"></p>
+      <p id="rankres2"></p>
+      <p class="resbox" id="consres"></p>
+      
+     
+      <p class="note" id="note">Go to the next page to understand the formula for consistency. <a href="formula_for_consistency.html">Click here</a></p>
+      </div>
+      
+    </div>
+      
+      <p style="float: center; align-content:right;">
+        <a href="./" class="previous">&laquo; Previous</a><!-- </p>
+        <p style="float: center; align-content:right;"> -->
+        <a id="nextPageBtn" href="formula_for_consistency.html" class="next" >Next &raquo;</a></p>
+    
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>
