@@ -92,7 +92,7 @@ Let solution of a system of two linear equations in three variables as given in 
 <i>x</i><sub>1</sub>+<i>x</i><sub>2</sub>=2            ... (<i>i</i>), <br>
 2<i>x</i><sub>1</sub>+2<i>x</i><sub>2</sub>=4        …(<i>ii</i>) and <br>
 3<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>=6        …(<i>iii</i>) <br>
-Then the related matrix equation is <i>AX</i>=<i>B</i>, where A=, X= and B=. Its solution exists which is shown in the Example 6.4. (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.
+Then the related matrix equation is <i>AX</i>=<i>B</i>, where $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} $ , $ X = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} $  and $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix} $ . Its solution exists which is shown in the Example 6.4. (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.
 #### 8. Conclusion:
 Following are equivalent: <br>
 (a) System of linear equations is consistent. <br>
