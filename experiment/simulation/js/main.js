@@ -94,50 +94,50 @@ if (!formSubmitted) {
     }
   }
 
-function showexp() {
+// function showexp() {
 
   
-        if (!formSubmitted) {
-            alert("Please enter and submit all the values.");
-            return;
-        }
+//         if (!formSubmitted) {
+//             alert("Please enter and submit all the values.");
+//             return;
+//         }
 
-    let  a = parseInt(document.getElementById("a").value);
-    let  b = parseInt(document.getElementById("b").value);
-    let  c = parseInt(document.getElementById("c").value);
-    let  b1 = parseInt(document.getElementById("b1").value); 
-    let  d = parseInt(document.getElementById("d").value);
-    let  e = parseInt(document.getElementById("e").value);
-    let  f = parseInt(document.getElementById("f").value);
-    let  b2 = parseInt(document.getElementById("b2").value);
+//     let  a = parseInt(document.getElementById("a").value);
+//     let  b = parseInt(document.getElementById("b").value);
+//     let  c = parseInt(document.getElementById("c").value);
+//     let  b1 = parseInt(document.getElementById("b1").value); 
+//     let  d = parseInt(document.getElementById("d").value);
+//     let  e = parseInt(document.getElementById("e").value);
+//     let  f = parseInt(document.getElementById("f").value);
+//     let  b2 = parseInt(document.getElementById("b2").value);
 
-    var isValid = true;
-    var inputs = document.getElementsByClassName("eqn");
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value === "") {
-            isValid = false;
-            break;
-        }
-    }
+//     var isValid = true;
+//     var inputs = document.getElementsByClassName("eqn");
+//     for (var i = 0; i < inputs.length; i++) {
+//         if (inputs[i].value === "") {
+//             isValid = false;
+//             break;
+//         }
+//     }
 
-    // Display alert if any input is empty
-    if (!isValid) {
-        alert("Please enter and submit all the values.");
-    } else {
+//     // Display alert if any input is empty
+//     if (!isValid) {
+//         alert("Please enter and submit all the values.");
+//     } else {
  
-  // Display the result
-  //document.getElementById("calcbtn2").style.display="block";
-//   document.getElementById('result').innerHTML = "AX = B <br> where," ;
-//   document.getElementById("mat").innerHTML ="\\[ A =  \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix} \\ ,  B =  \\begin{pmatrix} "+b1+" \\\\"  + b2+"\\end{pmatrix}, X = \\begin{pmatrix} x1 \\\\ x2 \\\\ x3  \\end{pmatrix} \\]";
-  document.getElementById("mat").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix}\\]";
-  MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-    //   document.getElementById('result2').innerHTML = "<b>Linear map T associated with A : </b> <br>T:R<sup>3</sup> &rarr; R<sup>2</sup><br>Let B<sub>1</sub> = {(1,0,0), (0,1,0), (0,0,1)} for R<sup>3</sup>, B<sub>2</sub> = {(1,0), (0,1)} for R<sup>2</sup>" ;
-    //   document.getElementById('te1').innerHTML = "T((0,0,1)) = " +a+ "(1, 0) + " +d+ "(0, 1)  <br>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1)  <br>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)" ;
-    //  document.getElementById('ty').innerHTML = "T(y) = b <br> T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ " y<sub>3</sub> ) , (" +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ " y<sub>3</sub> ) ";
+//   // Display the result
+//   //document.getElementById("calcbtn2").style.display="block";
+// //   document.getElementById('result').innerHTML = "AX = B <br> where," ;
+// //   document.getElementById("mat").innerHTML ="\\[ A =  \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix} \\ ,  B =  \\begin{pmatrix} "+b1+" \\\\"  + b2+"\\end{pmatrix}, X = \\begin{pmatrix} x1 \\\\ x2 \\\\ x3  \\end{pmatrix} \\]";
+//   document.getElementById("mat").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix}\\]";
+//   MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+//     //   document.getElementById('result2').innerHTML = "<b>Linear map T associated with A : </b> <br>T:R<sup>3</sup> &rarr; R<sup>2</sup><br>Let B<sub>1</sub> = {(1,0,0), (0,1,0), (0,0,1)} for R<sup>3</sup>, B<sub>2</sub> = {(1,0), (0,1)} for R<sup>2</sup>" ;
+//     //   document.getElementById('te1').innerHTML = "T((0,0,1)) = " +a+ "(1, 0) + " +d+ "(0, 1)  <br>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1)  <br>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)" ;
+//     //  document.getElementById('ty').innerHTML = "T(y) = b <br> T(y) = (" +a+ "y<sub>1</sub> + " +b+  "y<sub>2</sub> + "+c+ " y<sub>3</sub> ) , (" +d+ "y<sub>1</sub> + " +e+  "y<sub>2</sub> + "+f+ " y<sub>3</sub> ) ";
      
       
-    }
-}
+//     }
+// }
 
 
 

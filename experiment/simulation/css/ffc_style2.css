@@ -40,27 +40,30 @@
         border-radius: 0.5rem;
         box-shadow: 0px 3px 15px rgba(133, 115, 119, 1.0);
     }
-    .subbtn{
-        height:auto;
+    .subbtn1{
+       height:auto;
         width:auto;
         background-color:#81cdc6;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
         border: 1px solid teal;
         margin: 0.5rem 0.2rem 0.2rem 0.2rem;
     }
-    .subbtn:hover{
-        background: linear-gradient(90deg, #81cdc6);
-        color: white;
-        box-shadow: 0px 3px 15px rgba(10, 11, 19, 0.5);
-    }
-    .subbtn2{
-       background-color: none;
-    }
+   
     input{
         font-size: 20px;
     }
     .inp{
-      font-size: 15px;
+      font-size: 1.1rem;
+       height:auto;
+        width:auto;
+        background-color:#81cdc6;
+      
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        border: 1px solid teal;
+        margin: 0.5rem 0.2rem 0.2rem 0.2rem;
     }
     .secont {
     display: flex;
