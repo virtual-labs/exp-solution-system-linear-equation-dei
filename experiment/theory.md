@@ -25,7 +25,7 @@ It is well known that various physical situations are modelled in terms of syste
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;">Consider 2<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>+4<i>x</i><sub>3</sub>=1 and <i>x</i><sub>1</sub>-2<i>x</i><sub>2</sub>+3<i>x</i><sub>3</sub>=2 be a system of two linear equations in three variables. Then the coefficient matrix</span> $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and the given system of linear equations can be written as <i>AX</i>=<i>B</i>, where</span> $ X = \begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end {pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 1 \\\ 2 \end {pmatrix} $. <span style="font-family: 'Times New Roman'; font-size: 22px;">Clearly</span> $ A^+ = \begin{pmatrix} 2 & 3 & 4 \vert & 1 \\ 1 & -2 & 3 \vert & 2 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">is the augmented matrix. </span>
 
-**<span style="font-family: 'Times New Roman'; font-size: 22px;">5. Equivalence linear map equation:</span>**
+**<span style="font-family: 'Times New Roman'; font-size: 22px;">5. Equivalent linear map equation:</span>**
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;">We discuss below the linear map equation associated with a matrix equation.</span>
 
