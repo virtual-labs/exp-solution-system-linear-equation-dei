@@ -1,0 +1,126 @@
+{ 
+  "version": 2.0,
+  "questions": [
+   {
+      "question": "Let $A=\\begin{bmatrix} 2 & 3 \\\\ 0 & 0 \\end{bmatrix}$. Then for which B the matrix equation AX=B is consistent",
+      "answers": {
+        "a": " $B=\\begin{bmatrix} 0 \\\\ 3 \\end{bmatrix}$",
+        "b": "$B=\\begin{bmatrix} 0 \\\\ 1 \\end{bmatrix}$",
+        "c": "$B=\\begin{bmatrix} 1 \\\\ 0 \\end{bmatrix}$",
+        "d": "None of the above"
+      },
+        "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Correct. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Let $A=\\begin{bmatrix} 0 & 2 & 0 \\\\ 0 & 1 & 0 \\end{bmatrix}$. Then for which B the matrix equation AX=B is inconsistent",
+      "answers": {
+        "a": " $B=\\begin{bmatrix} 0 \\\\ 3 \\end{bmatrix}$",
+        "b": "$B=\\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$",
+        "c": "$B=\\begin{bmatrix} 4 \\\\ 4 \\end{bmatrix}$",
+        "d": "None of the above"
+      },
+        "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the consistent matrix equation AX=B, where A is a 2×3 and B is a column matrix of order 2×1. Let T:R^3→R^2 be the linear transformation w.r.t. the standard basis associated with the matrix A. Then ",
+      "answers": {
+        "a": "B&isin;Range(T)",
+        "b": "B&isin;Null space(T)",
+        "c": "B=0 0",
+        "d": "None of the above"
+      },
+       "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the consistent matrix equation AX=B, where A is a 2×3 and B= 0 0. Let T:R^3→R^2 be the linear transformation w.r.t. the standard basis associated with the matrix A. Then ",
+      "answers": {
+        "a": "$x \\notin Range(T)$",
+        "b": "$x \\notin Null space(T)$",
+        "c": "X = (0, 0, 0)",
+        "d": "None of the above"
+      },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Correct. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+        "question": "Consider a system of linear equations represented by AX=B, where A is an invertible matrix of order n×n. Then the system has",
+      "answers": {
+        "a": "One and only one solution",
+        "b": "Infinitely many solutions",
+        "c": "Exactly two solutions",
+        "d": "Finite but more than two solutions"
+      },
+       "explanations": {
+                "a": "Correct. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the system of two linear equations in three variables given by $x_1+x_2=3$ and $x_1+x_2+x_3=0$. Then",
+      "answers": {
+        "a": "System is consistent and has unique solution",
+        "b": "System is consistent and has finitely many solutions",
+        "c": "System is consistent and has infinitely many solutions ",
+        "d": "System is inconsistent"
+      },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Correct. Follows by definition.",
+                "d": "Incorrect. Follows by definition."
+            },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Consider the system of three linear equations in two variables given by $x_1+x_2=3, x_{1}-2x_2=-6$ and $x_1+3x_2=6$. Then",
+       "answers": {
+        "a": "System is consistent and has unique solution",
+        "b": "System is consistent and has finitely many solutions",
+        "c": "System is consistent and has infinitely many solutions ",
+        "d": "System is inconsistent"
+      },
+       "explanations": {
+                "a": "Incorrect. Follows by definition.",
+                "b": "Incorrect. Follows by definition.",
+                "c": "Incorrect. Follows by definition.",
+                "d": "Correct. Follows by definition."
+            },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+  ]
+}
+
+
