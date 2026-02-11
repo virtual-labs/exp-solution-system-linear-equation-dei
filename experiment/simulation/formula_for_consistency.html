@@ -30,7 +30,7 @@
       <option value="b">𝑨𝑿 = 𝑩</option>
       <option value="c">𝑩𝑿 = 𝑨</option>
       <!-- <option value="notinjective">T is Onto</option> -->
-    </select>
+    </select><span style="font-size: 24px;">, where b = </span><span id="wre" style='background-color: yellow; font-size: 24px;'></span>
     <button class="subbtn1" onclick="checkAnswer()">Submit</button>
     <p id="result" style="font-size: 24px;"></p></li></ul>
       
@@ -110,9 +110,13 @@
 <a href="./" class="previous">&laquo; Previous Page</a>
 </body>
 
-<script>
 
-var grid_size = 12;
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    var grid_size = 12;
 var x_axis_distance_grid_lines = 10;
 var y_axis_distance_grid_lines = 5;
 var x_axis_starting_point = { number: 1, suffix: '' };
@@ -246,41 +250,40 @@ for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
 ctx.stroke();
     
 }
- 
-        const a = localStorage.getItem("a");
-        const b = localStorage.getItem("b");
-        const c = localStorage.getItem("c");
-        const d = localStorage.getItem("d");
-        const e = localStorage.getItem("e");
-        const f = localStorage.getItem("f");
-        const b1 = localStorage.getItem("b1");
-        const b2 = localStorage.getItem("b2");
-        const matrix = localStorage.getItem("matrix");
-        const matrix2 = localStorage.getItem("matrix2");
-        const rank = localStorage.getItem("rank");
-        const rank2 = localStorage.getItem("rank2");
-      var isValid = true;
-        var inputs = document.getElementsByClassName("eqn");
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].value === "") {
-                isValid = false;
-                break;
-            }
-        }
 
-        // Display alert if any input is empty
-        if (!isValid) {
-            alert("Please enter and submit all the values.");
-        } else {
-       
-        document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'>T((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'>T((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'>T((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</ul>" ;
-       document.getElementById('ty').innerHTML = "<i>T</i>(<i>y</i>) = (" +a+ "<i>y</i><sub>1</sub> + " +b+  "<i>y</i><sub>2</sub> + "+c+ "<i>y</i><sub>3</sub>, " +d+ "<i>y</i><sub>1</sub> + " +e+  "<i>y</i><sub>2</sub> + "+f+ "<i>y</i><sub>3</sub>);  y = (<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, <i>y</i><sub>3</sub>) &isin; <i>R</i><sup>3</sup>";
-      
-    if(rank == rank2) {
+    // ===== Get Values from localStorage =====
+    const a  = parseFloat(localStorage.getItem("a"));
+    const b  = parseFloat(localStorage.getItem("b"));
+    const c  = parseFloat(localStorage.getItem("c"));
+    const d  = parseFloat(localStorage.getItem("d"));
+    const e  = parseFloat(localStorage.getItem("e"));
+    const f  = parseFloat(localStorage.getItem("f"));
+    const b1 = parseFloat(localStorage.getItem("b1"));
+    const b2 = parseFloat(localStorage.getItem("b2"));
+    const rank  = localStorage.getItem("rank");
+    const rank2 = localStorage.getItem("rank2");
+
+    // ===== Check if values exist =====
+
+    
+    if (
+        isNaN(a) || isNaN(b) || isNaN(c) ||
+        isNaN(d) || isNaN(e) || isNaN(f) ||
+        isNaN(b1) || isNaN(b2)
+    ) {
+        console.log("Values not found in localStorage");
+        return;
+    }
+
+    // ===== Show Transformation Formula =====
+    document.getElementById('te1').innerHTML = "<ul style='padding-left: 4rem;'><i>T</i>((1,0,0)) = " +a+ "(1, 0) + " +d+ "(0, 1) = ("+a+","+d+") </span><br><span style='padding-left: 0rem;'><i>T</i>((0,1,0)) = " +b+ "(1, 0) + " +e+ "(0, 1) = ("+b+","+e+")</span><br><span style='padding-left: 0rem;'><i>T</i>((0,0,1)) = " +c+ "(1, 0) + " +f+ "(0, 1)= ("+c+","+f+")</ul>" ;
+    document.getElementById('ty').innerHTML = "<i>T</i>(<i>y</i>) = (" +a+ "<i>y</i><sub>1</sub> + " +b+  "<i>y</i><sub>2</sub> + "+c+ "<i>y</i><sub>3</sub>, " +d+ "<i>y</i><sub>1</sub> + " +e+  "<i>y</i><sub>2</sub> + "+f+ "<i>y</i><sub>3</sub>);  y = (<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, <i>y</i><sub>3</sub>) &isin; <i>R</i><sup>3</sup>";
+
         
-       
-        document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} " +a+ " & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},&emsp;X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix},&emsp;B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+
+    // ===== Consistency Check =====
+    if (rank == rank2) {
+      document.getElementById('wre').innerHTML= "(" +b1 + ", "+b2+")";
         document.getElementById("note").innerHTML = `
          <ul class="eql_ME" style="list-style-type: '&#10148; '; font-size:28px"><li>
             <b>Consistency of matrix equation:</b>
@@ -295,13 +298,8 @@ ctx.stroke();
           <span style='background-color:yellow;'>
             <b>Consistent</b>
           </span></li></ul>`;
-
-        
-    }
-      else{
-       
-        document.getElementById("mat3").innerHTML ="\\[ A = \\begin{pmatrix} "+a+" & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},  X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix} ,  B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
-        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    } else {
+      document.getElementById('wre').innerHTML= "(" +b1 + ", "+b2+")";
          document.getElementById("note").innerHTML = `
           <span style="font-size: 28px; padding-left: 1rem; background-color: lightgreen;">
             <b>&#10148; Consistency of matrix equation:</b>
@@ -317,34 +315,52 @@ ctx.stroke();
             <b>Inconsistent</b>
           </span>`;
     }
-      
- 
+
+    // ===== Plot Points =====
+    function plotPoint(x, y, color) {
         ctx.beginPath();
-        ctx.arc(a*grid_size, -d*grid_size, 3, 0, 2 * Math.PI);
-        ctx.fillStyle = "red";
-
+        ctx.arc(x * grid_size, -y * grid_size, 4, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
         ctx.fill();
-        ctx.beginPath();
-        ctx.arc(b*grid_size, -e*grid_size, 3, 0, 2 * Math.PI);
+    }
 
-        ctx.fillStyle = "red";
-        ctx.fill();
-        ctx.beginPath();
+    // Red Points (Images of Basis Vectors)
+    plotPoint(a, d, "red");   // T(1,0,0)
+    plotPoint(b, e, "red");   // T(0,1,0)
+    plotPoint(c, f, "red");   // T(0,0,1)
 
-        ctx.arc(c*grid_size, -f*grid_size, 3, 0, 2 * Math.PI);
-        ctx.fillStyle = "red";
-        ctx.fill();
-        ctx.beginPath();
+    // Black Point (B Vector)
+    plotPoint(b1, b2, "black");
 
-        ctx.arc(b1*grid_size, -b2*grid_size, 3, 0, 2 * Math.PI);
-        ctx.fillStyle = "black";
-        ctx.fill();
+});
 
-       document.getElementById("my-canvas").style.display="block";
-       document.getElementById("pnote").innerHTML="<span style='color:blue; font-size: 1rem; '><b>Note:</b> Red points represent <i>T</i>(1, 0, 0), <i>T</i>(0, 1, 0) and <i>T</i>(0, 0, 1) and black point represents b</span>";
+document.getElementById("my-canvas").style.display="block";
+       document.getElementById("pnote").innerHTML="<span style='color:blue; font-size: 1rem; '><b>Note:</b> Red points represent <i>T</i>(1, 0, 0), <i>T</i>(0, 1, 0) and <i>T</i>(0, 0, 1) while black point represents b</span>";
        
+</script>
+
+
+
+
+<script>
+
+        const a = localStorage.getItem("a");
+        const b = localStorage.getItem("b");
+        const c = localStorage.getItem("c");
+        const d = localStorage.getItem("d");
+        const e = localStorage.getItem("e");
+        const f = localStorage.getItem("f");
+        const b1 = localStorage.getItem("b1");
+        const b2 = localStorage.getItem("b2");
+        const matrix = localStorage.getItem("matrix");
+        const matrix2 = localStorage.getItem("matrix2");
+        const rank = localStorage.getItem("rank");
+        const rank2 = localStorage.getItem("rank2");
+       
+        document.getElementById("mat3").innerHTML =" \\[ A = \\begin{pmatrix} " +a+ " & "+b+" &  "+ c +" \\\\"  + d+"&" + e+"&"+   f + "\\end{pmatrix},&emsp;X =  \\begin{pmatrix} x &#8321; \\\\ x &#8322; \\\\ x &#8323; \\end{pmatrix},&emsp;B = \\begin{pmatrix}  "+b1+" \\\\"  + b2+" \\end{pmatrix} \\]";
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);      
         
-  }
+  
   </script>
 </html>
 
