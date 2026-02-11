@@ -132,8 +132,7 @@ Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begi
 <span style="font-family: 'Times New Roman'; font-size: 22px;"> In this experiment, it is demonstrating that the consistency of a system of linear equations is studied through the consistency of related matrix equation and the condition for consistency and uniqueness of matrix equation is studied through related linear map equation. It is obtained that following are equivalent: <br>
 i. System of linear equations is consistent. <br>
 ii. Matrix equation is consistent. <br>
-iii. Linear map equation is consistent. <br>
-Therefore we study  </span>
+iii. Linear map equation is consistent. <br> </span>
 
 
 
