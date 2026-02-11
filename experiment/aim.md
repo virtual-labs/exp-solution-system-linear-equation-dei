@@ -1,1 +1,1 @@
-<span style="font-family: 'Times New Roman'; font-size: 22px;">The aim of this experiment is to demonstrate the mathematics behind consistency of systems of linear equations. Examples have been given to supplement the theory.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">The aim of this experiment is to demonstrate the understanding of consistency of the systems of linear equations. Examples have been given to supplement the theory.</span>
