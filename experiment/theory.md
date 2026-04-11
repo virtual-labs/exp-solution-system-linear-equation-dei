@@ -18,7 +18,6 @@ It is well known that various physical situations are modelled in terms of syste
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">3. Related matrix equation:</span>**
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;">Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} , $ $ X = \begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end {pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} r \\\ s \end {pmatrix} $.
-
 <span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution provides a solution of the system of linear equations and vice-versa. It may be noted that a system of linear equations is consistent if and only if the related matrix equation is consistent.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">4. Example:</span>**
