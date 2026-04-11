@@ -99,7 +99,7 @@ The linear map equation is <i>T</i>(<i>x, y, z</i>)=(4, 2) is consistent as <i>b
 Solution of linear map equation <i>T</i>(<i>x, y, z</i>)=(4, 2) is not unique as both (4, 0, 2) and (6, 2, 0) map to (4, 2). Notice that <i>T</i> is not one-to-one. <br>
 <br>
 <b>Understanding:</b>
-Notice that <i>b</i>≡(4, 2)&isin;Range(<i>T</i>), since column vectors of A generates Range(<i>T</i>). Therefore (4, 2) which is the last column vector of <i>A</i><sup>+</sup> is a linear combination of column vectors of <i>A</i>. This implies that Rank<i>A</i>=Rank<i>A</i><sup>+</sup>.</span>
+Notice that <i>b</i>≡(4, 2)=<i>T</i>(4, 0, 2)&isin;Range(<i>T</i>). Since column vectors of A generate Range(<i>T</i>), (4, 2) which is the last column of <i>A</i><sup>+</sup> is a linear combination of column vectors of <i>A</i>. This implies that Rank<i>A</i>=Rank<i>A</i><sup>+</sup>.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">6.5. Remark:</span>**
 
