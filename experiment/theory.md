@@ -111,7 +111,7 @@ iii. Let <i>A</i> be a matrix of order 3×2 and the matrix equation <i>AX</i>=<i
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.1. Consistency:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if the related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>. <br>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if the related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>.
 In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where</span> $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;"> is consistent. In this case, since <i>A</i>=<i>A</i><sup>+</sup>, the system is consistent. Hence a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.2. Uniqueness:</span>**
@@ -128,7 +128,7 @@ Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begi
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">8. Conclusion:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;"> In this experiment, it is demonstrated that the consistency of a system of linear equations can be studied through the consistency of related matrix equation and the condition for consistency and uniqueness of the matrix equation can be understood through related linear map equation, by obtaining that the following are equivalent: <br>
+<span style="font-family: 'Times New Roman'; font-size: 22px;"> In this experiment, it is demonstrated that the consistency of a system of linear equations can be studied through the consistency of related matrix equation and the consistency of the matrix equation can be understood through related linear map equation, by obtaining that the following are equivalent: <br>
 i. System of linear equations is consistent. <br>
 ii. Matrix equation is consistent. <br>
 iii. Linear map equation is consistent. <br> </span>
