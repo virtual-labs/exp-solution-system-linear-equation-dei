@@ -123,7 +123,7 @@ In particular, a homogenous system of two linear equations in three variables as
 <i>x</i><sub>1</sub>+<i>x</i><sub>2</sub>=2             <br>
 2<i>x</i><sub>1</sub>+2<i>x</i><sub>2</sub>=4         <br>
 3<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>=6         <br>
-Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} , $  $ X = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} $  <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix} $ . <span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution exists and is not unique which is shown in the Example 6.3. (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.</span>
+Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} , $  $ X = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} $  <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix} $ . <span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution exists and is not unique which is shown in Example 6.3 (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">8. Conclusion:</span>**
 
