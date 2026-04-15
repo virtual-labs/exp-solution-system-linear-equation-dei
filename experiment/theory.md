@@ -111,7 +111,7 @@ Notice that <i>b</i>≡(4, 2)=<i>T</i>(4, 0, 2)&isin;Range(<i>T</i>). Since colu
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.1. Consistency:</span>**
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;">Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if the related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>.
-In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where</span> $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;"> is consistent. In this case, since <i>A</i>=<i>A</i><sup>+</sup>, the system is consistent. Hence a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.</span>
+In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where</span> $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;"> is consistent. In this case, since Rank<i>A</i>=Rank<i>A</i><sup>+</sup>, the system is consistent. Hence a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.2. Uniqueness:</span>**
 
