@@ -13,29 +13,28 @@ It is well known that various physical situations are modelled in terms of syste
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">2. Coefficient matrix and augmented matrix:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">The matrix <i>A</i> = $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ and <i>B</i> = $ \begin{pmatrix} r \\\ s \end {pmatrix} $ are obtained from the coefficients of the equations given in the above section. The matrix <i>A</i> is called coefficient matrix and the matrix [<i>A</i>|<i>B</i>] is known as augmented matrix and is denoted by <i>A</i><sup>+</sup>. <br></span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">The matrix <i>A</i> = $ \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ and <i>B</i> = $ \begin{pmatrix} r \\\ s \end {pmatrix} $ are obtained from the coefficients of the equations given in the above section. The matrix <i>A</i> is called the coefficient matrix and the matrix [<i>A</i>|<i>B</i>] is known as the augmented matrix and is denoted by <i>A</i><sup>+</sup>. <br></span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">3. Related matrix equation:</span>**
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;">Let <i>A</i> be a matrix of order <i>m</i>×<i>n</i> and <i>B</i> be a column matrix of order <i>m</i>×1. Then <i>AX</i>=<i>B</i> is called a matrix equation. The matrix equation related to the given system of linear equations in Section 1 can be written as <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} , $ $ X = \begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end {pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} r \\\ s \end {pmatrix} $.
-
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution provides a solution of the system of linear equations and vice-versa. It may be noted that system of linear equations is consistent if and only if related matrix equation is consistent.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution provides a solution of the system of linear equations and vice-versa. It may be noted that a system of linear equations is consistent if and only if the related matrix equation is consistent.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">4. Example:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Consider 2<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>+4<i>x</i><sub>3</sub>=1 and <i>x</i><sub>1</sub>-2<i>x</i><sub>2</sub>+3<i>x</i><sub>3</sub>=2 be a system of two linear equations in three variables. Then the coefficient matrix</span> $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and the given system of linear equations can be written as <i>AX</i>=<i>B</i>, where</span> $ X = \begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end {pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 1 \\\ 2 \end {pmatrix} $. <span style="font-family: 'Times New Roman'; font-size: 22px;">Clearly</span> $ A^+ = \begin{pmatrix} 2 & 3 & 4 \vert & 1 \\ 1 & -2 & 3 \vert & 2 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">is the augmented matrix. </span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Let 2<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>+4<i>x</i><sub>3</sub>=1 and <i>x</i><sub>1</sub>-2<i>x</i><sub>2</sub>+3<i>x</i><sub>3</sub>=2 be a system of two linear equations in three variables. Then the coefficient matrix</span> $ A = \begin{pmatrix} a & b & c \\\ d & e & f\end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and the given system of linear equations can be written as <i>AX</i>=<i>B</i>, where</span> $ X = \begin{pmatrix} x_1 \\\ x_2 \\\ x_3 \end {pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 1 \\\ 2 \end {pmatrix} $. <span style="font-family: 'Times New Roman'; font-size: 22px;">Hence</span> $ A^+ = \begin{pmatrix} 2 & 3 & 4 \vert & 1 \\ 1 & -2 & 3 \vert & 2 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">is the augmented matrix. </span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">5. Equivalent linear map equation:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">We discuss below the linear map equation associated with a matrix equation.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">We discuss in this section, the linear map equation associated with a matrix equation.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">5.1. Related linear map and its range:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Let <i>AX</i>=<i>B</i> be a matrix equation. Recall from Experiment 5 that there is a linear map <i>T</i>:<i>R</i><sup>3</sup>→<i>R</i><sup>2</sup> associated with matrix <i>A</i> w.r.t. the standard basis of <i>R</i><sup>3</sup> and <i>R</i><sup>2</sup>. By definition, Range(<i>T</i>) ={<i>T</i>(<i>x</i>): <i>x</i>&isin;<i>R</i><sup>3</sup>}. That is, <i>y</i>&isin;Range(<i>T</i>) if and only if there exist <i>x</i>&isin;<i>R</i><sup>3</sup> such that <i>T</i>(<i>x</i>)=<i>y</i>. Note that Range(<i>T</i>) is generated by {<i>T</i>(e<sub>1</sub>), <i>T</i>(e<sub>2</sub>), <i>T</i>(e<sub>3</sub>)}.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Let <i>AX</i>=<i>B</i> be a matrix equation. Recall from Experiment 5 that there is a linear map <i>T</i>:<i>R</i><sup>3</sup>→<i>R</i><sup>2</sup> associated with the matrix <i>A</i> w.r.t. the standard basis of <i>R</i><sup>3</sup> and <i>R</i><sup>2</sup>. By definition, Range(<i>T</i>) ={<i>T</i>(<i>x</i>): <i>x</i>&isin;<i>R</i><sup>3</sup>}. That is, <i>y</i>&isin;Range(<i>T</i>) if and only if there exists <i>x</i>&isin;<i>R</i><sup>3</sup> such that <i>T</i>(<i>x</i>)=<i>y</i>. Note that Range(<i>T</i>) is generated by {<i>T</i>(e<sub>1</sub>), <i>T</i>(e<sub>2</sub>), <i>T</i>(e<sub>3</sub>)}.</span>
 
-**<span style="font-family: 'Times New Roman'; font-size: 22px;">5.2 Linear map equation and its consistency:</span>**
+**<span style="font-family: 'Times New Roman'; font-size: 22px;">5.2. Linear map equation and its consistency:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">The given system of linear equations represented by the matrix equation <i>AX</i>=<i>B</i> and leads to a linear map equation <i>T</i>(<i>x</i>)=<i>b</i>, where <i>x</i>=(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>)&isin;<i>R</i><sup>3</sup> and <i>b</i>=(<i>r</i>, <i>s</i>)&isin;<i>R</i><sup>2</sup>. It is consistent, that is it has a solution, that is there exist <i>x</i>&isin;<i>R</i><sup>3</sup> such that <i>T</i>(<i>x</i>)=<i>b</i>, if <i>b</i>&isin;Range(<i>T</i>), as discussed in Experiment 7.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">The given system of linear equations represented by the matrix equation <i>AX</i>=<i>B</i> leads to the linear map equation <i>T</i>(<i>x</i>)=<i>b</i>, where <i>x</i>=(<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>)&isin;<i>R</i><sup>3</sup> and <i>b</i>=(<i>r</i>, <i>s</i>)&isin;<i>R</i><sup>2</sup>. It is consistent, that is it has a solution, that is there exist <i>x</i>&isin;<i>R</i><sup>3</sup> such that <i>T</i>(<i>x</i>)=<i>b</i>, if <i>b</i>&isin;Range(<i>T</i>), as discussed in Experiment 7.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">5.3 Equivalence:</span>**
 
@@ -45,16 +44,15 @@ It is well known that various physical situations are modelled in terms of syste
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">6.1. Consistency:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Proposition: </b> <br>(a.) Matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. <br>
-(b.) Matrix equation <i>AX</i>=<i>B</i> is always consistent if <i>B</i>=0, that is <i>AX</i>=0 is always consistent. <br>
+<span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Proposition: </b> <br>(i) Matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. <br>
+(ii) Matrix equation <i>AX</i>=<i>B</i> is always consistent if <i>B</i>=0, that is <i>AX</i>=0 is always consistent. <br>
 <br>
-<b>Proof: </b> (a.) Let <i>AX</i>=<i>B</i> is consistent. Then the matrix equation <i>AX</i>=<i>B</i> has a solution. Thus <i>T</i>(<i>x</i>)=<i>b</i> has a solution. Recall from Experiment 7 that <i>T</i>(<i>x</i>)=<i>b</i> has a solution implies that <i>b</i>&isin;Range(<i>T</i>). Recall from Experiment 5 that Range of <i>T</i> is generated by image of basis elements and image of each basis element leads to a column of <i>A</i>. Thus if <i>b</i>&isin;Range(<i>T</i>), then <i>B</i> is a linear combination of columns of <i>A</i>. This is equivalent to saying Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. <br>
+<b>Proof: </b> (i) Let <i>AX</i>=<i>B</i> is consistent. Then the matrix equation <i>AX</i>=<i>B</i> has a solution. Thus <i>T</i>(<i>x</i>)=<i>b</i> has a solution. Recall from Experiment 7 that <i>T</i>(<i>x</i>)=<i>b</i> has a solution implies that <i>b</i>&isin;Range(<i>T</i>). Recall from Experiment 5 that Range of <i>T</i> is generated by image of basis elements and image of each basis element leads to a column of <i>A</i>. Thus if <i>b</i>&isin;Range(<i>T</i>), then <i>B</i> is a linear combination of columns of <i>A</i>. This is equivalent to saying Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. <br>
 <br>
-Conversely, let Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Then it means <i>B</i> is a linear combination of columns of <i>A</i>. <br>
-<br>
+Conversely, let Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Then it means <i>B</i> is a linear combination of columns of <i>A</i>. 
 As discussed in the preceding paragraph, Range(<i>T</i>) is generated by image of basis elements and image of each basis element leads to a column of <i>A</i>. Thus <i>b</i>&isin;Range(<i>T</i>) which means <i>T</i>(<i>x</i>)=<i>b</i> is consistent. This shows that the given matrix equation is consistent.<br>
 <br>
-(b.) As Rank<i>A</i>=Rank<i>A</i><sup>+</sup> from the above proposition, the given homogenous system of linear equations is consistent.</span>
+(ii) As Rank<i>A</i>=Rank<i>A</i><sup>+</sup> from the above proposition, the given homogenous system of linear equations is consistent.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">6.2. Uniqueness:</span>**
 
@@ -63,21 +61,21 @@ As discussed in the preceding paragraph, Range(<i>T</i>) is generated by image o
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">6.3. Example:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">(i.) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 2 \\\ 2 & 6\end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 3 \\\ 1 \end{pmatrix} $.
+<span style="font-family: 'Times New Roman'; font-size: 22px;">(i) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 2 \\\ 2 & 6\end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 3 \\\ 1 \end{pmatrix} $.
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Consistency & uniqueness:</b>
 Clearly</span> $ A^+ = \begin{pmatrix} 1 & 2 & \vert & 4 \\ 2 & 6 & \vert & 2 \end{pmatrix} . $
 <span style="font-family: 'Times New Roman'; font-size: 22px;">The rank of <i>A</i> is 2 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists that is, the given matrix equation is consistent. As <i>A</i> is a square matrix and is invertible, by Section 6.2. (i), solution is unique. <br>
-(ii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \end{pmatrix}. $ <br>
+(ii) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 & -1 \\ 0 & 0 & 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \end{pmatrix}. $ <br>
 <span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Consistency:</b>
 Clearly</span> $ A^+ = \begin{pmatrix} 1 & 1 & -1 \vert & 2 \\ 0 & 0 & 0 \vert & 4 \end{pmatrix} $
 <span style="font-family: 'Times New Roman'; font-size: 22px;">The rank of <i>A</i> is 1 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>≠Rank<i>A</i><sup>+</sup>. Thus the given matrix equation is inconsistent. <br>
-(iii.) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 2 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix}. $
+(iii) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 1 & -1 \\ 1 & 2 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 0 \\ 3 \end{pmatrix}. $
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Consistency & uniqueness:</b>
 Clearly</span> $ A^+ = \begin{pmatrix} 1 & 1  \vert & 2  \\ 1 & -1 \vert & 0 \\ 1 & 2  \vert & 3 \end{pmatrix} $
-<span style="font-family: 'Times New Roman'; font-size: 22px;">The rank of <i>A</i> is 2 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As (1, 1) is the only solution which satisfy the above matrix equation, solution is not unique. <br>
-(iv.) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix}. $
+<span style="font-family: 'Times New Roman'; font-size: 22px;">The rank of <i>A</i> is 2 and the rank of <i>A</i><sup>+</sup> is also 2. Hence Rank<i>A</i>=Rank<i>A</i><sup>+</sup>. Thus solution exists and the given matrix equation is consistent. As only (1, 1) satisfies the above matrix equation, solution is unique. <br>
+(iv) Consider the matrix equation <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix}. $
 
 <span style="font-family: 'Times New Roman'; font-size: 22px;"><b>Consistency & uniqueness:</b>
 Clearly</span> $ A^+ = \begin{pmatrix} 1 & 1  \vert & 2  \\ 2 & 2 \vert & 4 \\ 3 & 3  \vert & 6 \end{pmatrix} $
@@ -100,39 +98,39 @@ The linear map equation is <i>T</i>(<i>x, y, z</i>)=(4, 2) is consistent as <i>b
 Solution of linear map equation <i>T</i>(<i>x, y, z</i>)=(4, 2) is not unique as both (4, 0, 2) and (6, 2, 0) map to (4, 2). Notice that <i>T</i> is not one-to-one. <br>
 <br>
 <b>Understanding:</b>
-As <i>b</i>≡(4, 2)&isin;Range(<i>T</i>), (4, 2) which is the last column vector of <i>A</i><sup>+</sup> is a linear combination of column vectors of <i>A</i>. This implies that Rank<i>A</i>=Rank<i>A</i><sup>+</sup>.</span>
+Notice that <i>b</i>≡(4, 2)=<i>T</i>(4, 0, 2)&isin;Range(<i>T</i>). Since column vectors of A generate Range(<i>T</i>), hence (4, 2) which is the last column of <i>A</i><sup>+</sup> is a linear combination of column vectors of <i>A</i>. This implies that Rank<i>A</i>=Rank<i>A</i><sup>+</sup>.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">6.5. Remark:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">i. Let <i>A</i> be a square matrix and the matrix equation <i>AX</i>=<i>B</i> is consistent. Then it has a unique solution if and only if <i>A</i> is invertible. <br>
-ii. Let <i>A</i> be a matrix of order 2×3 and the matrix equation <i>AX</i>=<i>B</i> is consistent. Then it does not have a unique solution. <br>
-iii. Let <i>A</i> be a matrix of order 3×2 and the matrix equation <i>AX</i>=<i>B</i> is consistent. Then it may or may not have a unique solution. It has a unique solution if and only if Rank<i>A</i>=2.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">(i) Let <i>A</i> be a square matrix and the matrix equation <i>AX</i>=<i>B</i> be consistent. Then it has a unique solution if and only if <i>A</i> is invertible. <br>
+(ii) Let <i>A</i> be a matrix of order 2×3 and the matrix equation <i>AX</i>=<i>B</i> be consistent. Then it does not have a unique solution. <br>
+(iii) Let <i>A</i> be a matrix of order 3×2 and the matrix equation <i>AX</i>=<i>B</i> be consistent. Then it may or may not have a unique solution. It has a unique solution if and only if Rank<i>A</i>=2.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7. Consistency (existence of solution) of a system of linear equations:</span>**
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.1. Consistency:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>. <br>
-In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where</span> $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;"> is consistent. In this case, clearly since <i>A</i>=<i>A</i><sup>+</sup>, a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Consider a system of two linear equations in three variables as given by equation (<i>i</i>). Then it is consistent if and only if the related matrix equation <i>AX</i>=<i>B</i> is consistent if and only if Rank<i>A</i> =Rank<i>A</i><sup>+</sup>.
+In particular, a homogenous system of two linear equations in three variables as given in equation (ii) is consistent if and only if matrix equation <i>AX</i>=0, where</span> $ 0 = \begin{pmatrix} 0 \\ 0 \\ 0 \end{pmatrix} $ <span style="font-family: 'Times New Roman'; font-size: 22px;"> is consistent. In this case, since Rank<i>A</i>=Rank<i>A</i><sup>+</sup>, the system is consistent. Hence a homogenous system of two linear equations in three variables is always consistent. It is evident that (0, 0, 0) is a solution.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.2. Uniqueness:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">Let solution of a system of two linear equations in three variables as given in equation (i) exist. Then it has a unique solution if and only if matrix equation <i>AX</i>=<i>B</i> has a unique solution.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">Let solution of a system of two linear equations in three variables as given in equation (i) exist. Then it has a unique solution if and only if the matrix equation <i>AX</i>=<i>B</i> has a unique solution.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">7.3. Example:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;">(i.) Consider the system of three linear equations in two variables given as follows 
-<i>x</i><sub>1</sub>+<i>x</i><sub>2</sub>=2            ... (<i>i</i>), <br>
-2<i>x</i><sub>1</sub>+2<i>x</i><sub>2</sub>=4        …(<i>ii</i>) and <br>
-3<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>=6        …(<i>iii</i>) <br>
-Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} , $  $ X = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} $  <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix} $ . <span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution exists which is shown in the Example 6.4. (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.</span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;">(i) Consider the system of three linear equations in two variables given as follows:<br>
+<i>x</i><sub>1</sub>+<i>x</i><sub>2</sub>=2             <br>
+2<i>x</i><sub>1</sub>+2<i>x</i><sub>2</sub>=4         <br>
+3<i>x</i><sub>1</sub>+3<i>x</i><sub>2</sub>=6         <br>
+Then the related matrix equation is <i>AX</i>=<i>B</i>, where</span> $ A = \begin{pmatrix} 1 & 1 \\ 2 & 2 \\ 3 & 3 \end{pmatrix} , $  $ X = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} $  <span style="font-family: 'Times New Roman'; font-size: 22px;">and</span> $ B = \begin{pmatrix} 2 \\ 4 \\ 6 \end{pmatrix} $ . <span style="font-family: 'Times New Roman'; font-size: 22px;">Its solution exists and is not unique which is shown in Example 6.3 (iv) above. Hence the given system of linear equations is consistent and the solution is not unique.</span>
 
 **<span style="font-family: 'Times New Roman'; font-size: 22px;">8. Conclusion:</span>**
 
-<span style="font-family: 'Times New Roman'; font-size: 22px;"> In this experiment, it is demonstrated that the consistency of a system of linear equations can be studied through the consistency of related matrix equation and the condition for consistency and uniqueness of the matrix equation can be understood through related linear map equation, by obtaining that the following are equivalent: <br>
-i. System of linear equations is consistent. <br>
-ii. Matrix equation is consistent. <br>
-iii. Linear map equation is consistent. <br> </span>
+<span style="font-family: 'Times New Roman'; font-size: 22px;"> In this experiment, it is demonstrated that the consistency of a system of linear equations can be studied through the consistency of related matrix equation and the consistency of the matrix equation can be understood through related linear map equation, by obtaining that the following are equivalent: <br>
+(i) System of linear equations is consistent. <br>
+(ii) Matrix equation is consistent. <br>
+(iii) Linear map equation is consistent. <br> </span>
 
 
 
