@@ -49,6 +49,13 @@
         font-weight: 600;
         border: 1px solid teal;
         margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+        cursor: pointer;
+    }
+
+    .subbtn1:hover{
+      background-color: rgb(160, 164, 160);
+      color: black;
+
     }
    
     input{
@@ -59,11 +66,17 @@
        height:auto;
         width:auto;
         background-color:#81cdc6;
-      
+        cursor: pointer;
         font-family: 'Times New Roman', Times, serif;
         font-weight: 600;
         border: 1px solid teal;
         margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+        
+    }
+    .inp:hover{
+      background-color: rgb(160, 164, 160);
+      color: black;
+
     }
     .secont {
     display: flex;
