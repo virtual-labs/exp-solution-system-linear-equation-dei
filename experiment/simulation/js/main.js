@@ -1,19 +1,20 @@
-var formSubmitted = false;
+
  
 function submit() {
 
+localStorage.removeItem("formSubmitted");
 
-  let  a = parseInt(document.getElementById("a").value);
-    let  b = parseInt(document.getElementById("b").value);
-    let  c = parseInt(document.getElementById("c").value);
-    let  b1 = parseInt(document.getElementById("b1").value); 
-    let  d = parseInt(document.getElementById("d").value);
-    let  e = parseInt(document.getElementById("e").value);
-    let  f = parseInt(document.getElementById("f").value);
-    let  b2 = parseInt(document.getElementById("b2").value);
-    let x1="<i>x</i><sub>1</sub>";
-    let x2="<i>x</i><sub>2</sub>";
-         // Loop through each input field
+  var formSubmitted = false;
+    let a  = parseInt(document.getElementById("a").value);
+    let b  = parseInt(document.getElementById("b").value);
+    let c  = parseInt(document.getElementById("c").value);
+    let b1 = parseInt(document.getElementById("b1").value);
+    let d  = parseInt(document.getElementById("d").value);
+    let e  = parseInt(document.getElementById("e").value);
+    let f  = parseInt(document.getElementById("f").value);
+    let b2 = parseInt(document.getElementById("b2").value);
+
+    // 1️⃣ Pehle empty check karo
     var isValid = true;
     var inputs = document.getElementsByClassName("eqn");
     for (var i = 0; i < inputs.length; i++) {
@@ -22,18 +23,38 @@ function submit() {
             break;
         }
     }
+    if (!isValid) {
+        alert("Please enter all the values.");
+        return; // ← return lagao, aage mat jao
+    }
 
+    // 2️⃣ Phir range check karo
+    if (
+        a < -4 || a > 14 ||
+        b < -4 || b > 14 ||
+        c < -4 || c > 14 ||
+        b1 < -4 || b1 > 14 ||
+        d < -4 || d > 14 ||
+        e < -4 || e > 14 ||
+        f < -4 || f > 14 ||
+        b2 < -4 || b2 > 14
+    ) {
+        alert("Co-efficient values must be between -4 and 14.");
+        return; // ← yahan bhi return, submit mat karo
+    }
+
+    // 3️⃣ Sab theek hai — ab submit karo
     const matrix = [
-    [parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value), parseFloat(document.getElementById('c').value)],
-    [parseFloat(document.getElementById('d').value), parseFloat(document.getElementById('e').value), parseFloat(document.getElementById('f').value)]
-  ];
-  const matrix2 = [
-    [parseFloat(document.getElementById('a').value), parseFloat(document.getElementById('b').value), parseFloat(document.getElementById('c').value), parseFloat(document.getElementById('b1').value)],
-    [parseFloat(document.getElementById('d').value), parseFloat(document.getElementById('e').value), parseFloat(document.getElementById('f').value), parseFloat(document.getElementById('b2').value)]
-  ];
+        [a, b, c],
+        [d, e, f]
+    ];
+    const matrix2 = [
+        [a, b, c, b1],
+        [d, e, f, b2]
+    ];
+    const rank  = getMatrixRank(matrix);
+    const rank2 = getMatrixRank(matrix2);
 
-  const rank = getMatrixRank(matrix);
-  const rank2 = getMatrixRank(matrix2);
     // Display alert if any input is empty
     if (!isValid) {
         alert("Please enter all the values.");
@@ -55,6 +76,8 @@ function submit() {
         formSubmitted = true;
     
     }
+
+    localStorage.setItem("formSubmitted", "true");
    
 }
 
