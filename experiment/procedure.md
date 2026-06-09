@@ -2,7 +2,7 @@
 2.	Click on “System of linear equation under consideration” button to display the system of linear equations for which you just entered the values.<br>
 3.	Click on “Related matrices” button to understand the three matrices associated with the chosen system of linear equations.<br>
 4.	Click on “Consistency of chosen system of linear equations” button to determine and understand whether the given system is consistent or not.<br>
-5.	Click on “Click here” button or “Next page” button to go to the next page entitled “Illustration to understand the formula for consistency”.<br>
+5.	Click on “Click here” button or “Next” button to go to the next page entitled “Illustration to understand the formula for consistency”.<br>
 6.	In “Recall” section, matrices related to the chosen system of linear equation are restated.<br>
 7.	In “Linear transformation <i>T</i> (associated with A w.r.t standard basis)” section, the related linear transformation is defined.<br>
 8.	In the next section, choose the correct option from the dropdown and click on “Submit” button to check the answer.<br>
