@@ -1,10 +1,10 @@
-
+var formSubmitted = false;
  
 function submit() {
 
 localStorage.removeItem("formSubmitted");
 
-  var formSubmitted = false;
+ 
     let a  = parseInt(document.getElementById("a").value);
     let b  = parseInt(document.getElementById("b").value);
     let c  = parseInt(document.getElementById("c").value);
